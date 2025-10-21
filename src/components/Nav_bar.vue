@@ -3,7 +3,7 @@
     <nav class="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 z-50">
 
         <div class="flex items-center justify-center flex-row gap-2">
-            <img class="hidden md:block w-13 cursor-pointer" src="/favicon.svg" @click="router.push('/')" alt="logo">
+            <img class="hidden md:block w-12 cursor-pointer" src="/favicon.svg" @click="router.push('/')" alt="logo">
             <div class=" uppercase font-bold rounded-sm px-3 py-1.5 border-2 border-[var(--btn)]">beta</div>
         </div>
 

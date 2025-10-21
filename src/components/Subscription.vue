@@ -78,7 +78,7 @@
                     @click="cancel_sub(sub.id, sub.cancel_at_period_end)"
                     class="perso" 
                     :style="{ '--btn-color': localuser.plan.find(plan => plan.sub_id == sub.id)?.color || 'var(--btn)' }"
-                    :class="sub.cancel_at_period_end ? 'saturate-0' : ''"
+                    :class="sub.cancel_at_period_end ? 'saturate-0 pointer-events-none' : ''"
                 >
                     Résilier l'abonnement
                 </button>
@@ -178,6 +178,7 @@
 
 import { ref, onMounted } from 'vue'
 import { useUser } from '@clerk/vue'
+import { api_url } from '../assets/config';
 
 const customer = ref(null);
 const localuser = ref(null);
@@ -194,7 +195,7 @@ const cancel_sub = async (sub_id, isCancel) => {
 
     if (confirm("Es-tu sûr de vouloir continuer ?")) {
 
-        await fetch('https://api.silvernote.fr/user/stripe/cancel/sub', {
+        await fetch(`${api_url}/user/stripe/cancel/sub`, {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ subId: sub_id })
@@ -215,13 +216,13 @@ async function fetchCustomerData() {
     const loaded = await isLoaded;
     console.log(await loaded);
 
-    const user_back_db = await fetch('https://api.silvernote.fr/user/get/data', {
+    const user_back_db = await fetch(`${api_url}/user/get/data`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ user_id: user.value?.id })
     }).then(res => res.json());
 
-    const res = await fetch(`https://api.silvernote.fr/money/customer/${(await user_back_db).customerId}/${user.value?.id}`);
+    const res = await fetch(`${api_url}/money/customer/${(await user_back_db).customerId}/${user.value?.id}`);
 
     if (!res.ok) throw new Error(`Erreur API: ${res.status}`);
     const data = await res.json();

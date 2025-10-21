@@ -33,10 +33,10 @@
 
     </section>
 
-    <section class="px-10 py-20 flex items-center flex-col mx-auto text-lg space-y-8 text-[var(--text)]">
+    <section class="px-10 py-20 flex items-center flex-col mx-auto space-y-8">
     
-        <h2 class="uppercase text-4xl font-extrabold mb-2">mes id</h2>
-        <ul>
+        <h2 class="uppercase text-xl font-extrabold mb-2">mes id</h2>
+        <ul class="text-sm">
             <li>Clerk user Id : {{ myuser?.userId }}</li>
             <li>Stripe customer Id : {{ myuser?.customerId }}</li>
         </ul>
