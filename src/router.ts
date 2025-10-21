@@ -9,6 +9,7 @@ import Cancel from './views/pay/Cancel.vue';
 import Success from './views/pay/Success.vue';
 import Pricing from './views/pay/Pricing.vue';
 import Profile from './views/user/Profile.vue';
+import { ConnectionPage } from './lib/silvernote-vue';
 
 const routes = [
 
@@ -77,6 +78,16 @@ const routes = [
     component: Profile,
     props: {},
     meta: { title: 'SilverNote - profile' }
+  },
+
+
+
+  { 
+    path: '/auth', 
+    name: 'auth', 
+    component: ConnectionPage,
+    props: {},
+    meta: { title: 'SilverNote - connection' }
   },
 
 ]

@@ -38,31 +38,38 @@ h1 {
   color: var(--text);
 }
 
+button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 button.primary {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.8rem 1.5rem;
+  padding: 0.4em 1rem;
   font-size: 1em;
-  font-weight: 600;
+  font-weight: 500;
   font-family: inherit;
   background-color: var(--btn);
   color: white;
   cursor: pointer;
-  transition: border-color 0.25s, background-color 0.25s;
+  transition: all 0.25s;
 }
 
 button.second {
   border-radius: 8px;
   border: 2px solid var(--btn);
-  padding: 0.7rem 1.4em;
+  padding: 0.4em 1em;
   font-size: 1em;
-  font-weight: 600;
+  font-weight: 500;
   font-family: inherit;
-  background-color: var(--btn);
   background-color: transparent;
   color: var(--text);
   cursor: pointer;
-  transition: border-color 0.25s, background-color 0.25s;
+  transition: all 0.25s;
 }
 
 button.perso {
