@@ -10,7 +10,7 @@
         <ul class="hidden md:flex items-center space-x-6">
             <li @click="router.push('/')"><a>Maison</a></li>
             <li @click="router.push('/'); scroll_to('function')"><a>Fonctionalités</a></li>
-            <li @click="router.push('/'); scroll_to('jeremy')"><a>SilverAI</a></li>
+            <li @click="router.push('/'); scroll_to('SilverAI')"><a>SilverAI</a></li>
             <li @click="router.push('/'); scroll_to('price_plan')" v-if="we_can_buy"><a>Tarifs et abonements</a></li>
             <li @click="router.push('/download')" v-if="we_can_download"><a>Télécharger</a></li>
         </ul>
@@ -19,7 +19,7 @@
 
         <button 
           @click="menu = !menu" 
-          class="cursor-pointer  xl:hidden text-gray-600 hover:text-[var(--primary )] focus:outline-none z-50"
+          class="cursor-pointer btn-burger text-gray-600 hover:text-[var(--primary )] focus:outline-none z-50"
           style="transition: all 0.3s;"
           :class="menu ? 'rotate-90' : 'rotate-0'"
         >
@@ -37,6 +37,7 @@
         <ul class="flex flex-col items-center justify-center gap-6">
             <li @click="menu = false; router.push('/')"><a>Maison</a></li>
             <li @click="menu = false; router.push('/'); scroll_to('function')"><a>Fonctionalités</a></li>
+            <li @click="router.push('/'); scroll_to('SilverAI')"><a>SilverAI</a></li>
             <li @click="menu = false; router.push('/'); scroll_to('price_plan')" v-if="we_can_buy"><a>Tarifs et abonements</a></li>
             <li @click="menu = false; router.push('/download')" v-if="we_can_download"><a>Télécharger</a></li>
         </ul>
@@ -56,7 +57,7 @@ const router = useRouter();
 
 const menu = ref<boolean>(false);
 
-const scroll_to = (id: 'function' | 'home' | 'price_plan' | 'jeremy') => {
+const scroll_to = (id: 'function' | 'home' | 'price_plan' | 'SilverAI') => {
     const element = document.getElementById(id)
     if (element) {
         element.scrollIntoView({ behavior: 'smooth' })
@@ -64,3 +65,17 @@ const scroll_to = (id: 'function' | 'home' | 'price_plan' | 'jeremy') => {
 }
 
 </script>
+
+<style scoped>
+
+.btn-burger {
+    display: none;
+}
+
+@media (max-width: 770px) {
+    .btn-burger {
+        display: block;
+    }
+}
+
+</style>
