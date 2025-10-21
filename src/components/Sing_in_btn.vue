@@ -4,7 +4,7 @@
 
     <SignedOut class="flex justify-center items-center flex-row">
 
-      <SignInButton>
+      <a @click="router.push('/auth?form=signin')">
 
         <button 
             v-if="login || true" 
@@ -13,9 +13,9 @@
             Se connecter
         </button>
         
-      </SignInButton>
+      </a>
 
-      <SignUpButton>
+      <a @click="router.push('/auth?form=signup')">
 
         <button 
             v-if="register || true"
@@ -24,7 +24,7 @@
             S'inscrire
         </button>
 
-      </SignUpButton>
+      </a>
 
     </SignedOut>
 
@@ -100,7 +100,7 @@
 
 <script setup lang="ts">
 
-    import { SignedIn, SignedOut, SignInButton, SignOutButton, SignUpButton, useUser } from '@clerk/vue'
+    import { SignedIn, SignedOut, SignOutButton, useUser } from '@clerk/vue'
     import { onMounted, ref } from 'vue';
     import { useRouter } from 'vue-router';
 
