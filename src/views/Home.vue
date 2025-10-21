@@ -286,47 +286,6 @@
                 </div>
 
             </div>
-<!-- 
-            <Swiper
-                :slides-per-view="1"
-                :space-between="10"
-                :modules="modules"
-                :loop="true"
-                :autoplay="{
-                    delay: 5000,
-                    disableOnInteraction: false
-                }"
-                :pagination="{
-                    clickable: true
-                }"
-                class="w-full"
-            >
-
-                <SwiperSlide>
-                    <span class="text-2xl" style="letter-spacing: 2px;">silvernote - home</span>
-                    <img src="/assets/img/phone_view_home_light.png" alt="" class="w-full h-auto object-contain" />
-                    <div class="absolute bottom-0 left-0 right-0 h-10 bg-[var(--bg)]/70 backdrop:blur-2xl"></div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <span class="text-2xl" style="letter-spacing: 2px;">silvernote - edit</span>
-                    <img src="/assets/img/phone_view_edit_light.png" alt="" class="w-full h-auto object-contain" />
-                    <div class="absolute bottom-0 left-0 right-0 h-10 bg-[var(--bg)]/70 backdrop:blur-2xl"></div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <span class="text-2xl" style="letter-spacing: 2px;">silvernote - home</span>
-                    <img src="/assets/img/phone_view_home_dark.png" alt="" class="w-full h-auto object-contain" />
-                    <div class="absolute bottom-0 left-0 right-0 h-10 bg-[var(--bg)]/70 backdrop:blur-2xl"></div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <span class="text-2xl" style="letter-spacing: 2px;">silvernote - edit</span>
-                    <img src="/assets/img/phone_view_edit_dark.png" alt="" class="w-full h-auto object-contain" />
-                    <div class="absolute bottom-0 left-0 right-0 h-10 bg-[var(--bg)]/70 backdrop:blur-2xl"></div>
-                </SwiperSlide>
-
-            </Swiper> -->
 
         </div>
 
