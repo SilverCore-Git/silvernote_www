@@ -243,9 +243,9 @@ const plans: {
     }
 };
 
-
-const we_can_buy: boolean = false;
-const we_can_download: boolean = false;
+const api_url: string = 'http://localhost:3000'; // api.silvernote.fr
+const we_can_buy: boolean = true;
+const we_can_download: boolean = true;
 
 export {
     function_list,
@@ -253,5 +253,6 @@ export {
     plans,
     pricing_plan_prices,
     we_can_buy,
-    we_can_download
+    we_can_download,
+    api_url
 }

@@ -56,6 +56,7 @@ import Footer from '../../components/Footer.vue';
 import { UserProfile, useUser } from '@clerk/vue';
 import Subscription from '../../components/Subscription.vue';
 import { onMounted, ref } from 'vue';
+import { api_url } from '../../assets/config';
 
 const myuser = ref<any | undefined>(undefined);
 const { user, isLoaded } = useUser();
@@ -65,8 +66,8 @@ onMounted(async () => {
     const loaded = await isLoaded;
     console.log(await loaded);
 
-    myuser.value = await fetch('https://api.silvernote.fr/user/get/data', {
-        method: 'POSt',
+    myuser.value = await fetch(`${api_url}/user/get/data`, {
+        method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ user_id: user.value?.id })
     }).then(res => res.json());

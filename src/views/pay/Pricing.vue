@@ -87,7 +87,7 @@ import Nav_bar from '../../components/Nav_bar.vue'
 import Loader from '../../components/Loader.vue';
 import { onMounted, ref } from 'vue';
 
-import { plans, pricing_plan_prices } from '../../assets/config';
+import { api_url, plans, pricing_plan_prices } from '../../assets/config';
 import { scroll_to } from '../../assets/utils';
 import { SignedIn, SignedOut, SignInButton, useUser } from '@clerk/vue';
 
@@ -133,7 +133,7 @@ const create_checkout = async (): Promise<void> => {
     try {
 
         const response = await fetch(
-            `https://api.silvernote.fr/money/create/checkout/link/for/${props.priceId}/withmode/${mode}`,
+            `${api_url}/money/create/checkout/link/for/${props.priceId}/withmode/${mode}`,
             { 
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

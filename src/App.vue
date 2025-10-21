@@ -14,6 +14,7 @@
 import { useUser } from '@clerk/vue';
 import Loader from './components/Loader.vue';
 import { watch } from 'vue';
+import { api_url } from './assets/config';
 
 const { isLoaded, user } = useUser();
 
@@ -21,7 +22,7 @@ watch(isLoaded, async () => {
 
   if (!isLoaded) return;
 
-  const verify = await fetch('https://api.silvernote.fr/user/verify', {
+  const verify = await fetch(`${api_url}/user/verify`, {
     method: 'POST',
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ user_id: user.value?.id })
@@ -29,7 +30,7 @@ watch(isLoaded, async () => {
 
   if (await verify) return;
 
-  await fetch('https://api.silvernote.fr/user/create', {
+  await fetch(`${api_url}/user/create`, {
     method: 'POST',
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ user: user.value })

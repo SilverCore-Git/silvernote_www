@@ -36,6 +36,7 @@ import { useRoute, useRouter } from 'vue-router';
 
 import Nav_bar from '../../components/Nav_bar.vue';
 import Footer from '../../components/Footer.vue';
+import { api_url } from '../../assets/config';
 
 const route = useRoute();
 const router = useRouter();
@@ -45,7 +46,7 @@ const plan = ref<'silver' | 'gold' | 'platinium' | 'ultimate' | null>(null);
 onMounted(() => {
     plan.value = route.query.plan?.toString() as 'silver' | 'gold' | 'platinium' | 'ultimate';
     
-    fetch('https://api.silvernote.fr/money/success/checkout', {
+    fetch(`${api_url}/money/success/checkout`, {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ session_id: route.query.session_id })

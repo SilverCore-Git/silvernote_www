@@ -47,6 +47,7 @@ import Nav_bar from '../../components/Nav_bar.vue';
 import Footer from '../../components/Footer.vue';
 import { useUser } from '@clerk/vue';
 import Loader from '../../components/Loader.vue';
+import { api_url } from '../../assets/config';
 
 const route = useRoute();
 const { user, isLoaded } = useUser();
@@ -63,14 +64,14 @@ onMounted(() => {
 
             const response
                     : Promise<{ ok?: boolean, plan: string, error?: boolean, plan_data: any, sub_id: string, customerId: string }> 
-                    = await fetch('https://api.silvernote.fr/money/success/checkout', {
+                    = await fetch(`${api_url}/money/success/checkout`, {
                 method: 'POST',
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ session_id: route.query.session_id, user_id: user.value?.id })
             }).then(res => res.json());
 
             if ((await response).ok) {
-                await fetch('https://api.silvernote.fr/user/plan/set',
+                await fetch(`${api_url}/user/plan/set`,
                     {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
