@@ -8,11 +8,11 @@
 
     <header 
         id="home"
-        class=" bg-cover bg-center rounded-xl my-8 w-[calc(100vw_-_2rem)] mx-4 h-160 mt-26" 
+        class=" bg-cover bg-center rounded-xl my-8 w-[calc(100vw_-_2rem)] mx-4 min-h-160 mt-26" 
         style="background-image: url('/assets/img/hero_baner.jpg');"
     >
 
-        <div class="w-full h-160 rounded-xl text-center py-10 md:py-25 xl:py-10" style="backdrop-filter: blur(8px) contrast(80%) brightness(200%);">
+        <div class="w-full h-full rounded-xl text-center py-10 md:py-25 xl:py-10" style="backdrop-filter: blur(8px) contrast(80%) brightness(200%);">
 
             <div class="mx-auto flex justify-center items-center flex-row">
 
@@ -27,14 +27,13 @@
                         <br>Projet en développement, beta gratuite disponible.
                     </p>
 
+                    <Compteur 
+                        target-date="Nov 28, 2025 18:00:00 UTC+1"
+                    />
+
                     <div class=" flex flex-col sm:flex-row justify-center items-center">
                         
-                        <a href="https://app.silvernote.fr"><button class="premium m-4">Découvrir silvernote</button></a>
-                        
-                        <div class="hidden">
-                            <a href="https://app.silvernote.fr"><button class="primary m-4">Ouvrir silvernote</button></a>
-                            <button @click="scroll_to('function')" style="backdrop-filter: blur(50px);" class="second">En savoir plus</button>
-                        </div>
+                        <a href="https://app.silvernote.fr"><button class="primary m-4">Découvrir silvernote</button></a>
 
                     </div>
 
@@ -313,7 +312,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import { pricing_plan_list, function_list, we_can_buy } from '../assets/config';
-import { scroll_to } from '../assets/utils';
 
 import Nav_bar from '../components/Nav_bar.vue';
 import Card from '../components/Card.vue';
@@ -322,6 +320,7 @@ import Footer from '../components/Footer.vue';
 import { SignedIn, SignedOut } from '@clerk/vue';
 import SilverAI from '../components/section/SilverAI.vue';
 import Multi_platform from '../components/section/Multi_platform.vue';
+import Compteur from '../lib/silvernote-vue/components/Compteur.vue';
 
 
 const selected_mode_for = ref<number>(1);

@@ -64,8 +64,8 @@ const pricing_plan_list: {
         price: 0,
         functions: [
             { name: "jusqu'a 100 notes", includ: true },
-            { name: "jusqu'a 20 dossiers", includ: true },
-            { name: "Jeremy", includ: false },
+            { name: "jusqu'a 20 tag", includ: true },
+            { name: "SilverAI", includ: false },
             { name: "Partage de note", includ: false },
         ],
         recommended: false,
@@ -76,8 +76,8 @@ const pricing_plan_list: {
         price: 4, // + 0.99
         functions: [
             { name: "jusqu'a 200 notes", includ: true },
-            { name: "jusqu'a 50 dossiers", includ: true },
-            { name: "Jeremy (50 message /jours max)", includ: true },
+            { name: "jusqu'a 50 tag", includ: true },
+            { name: "SilverAI (50 message /jours)", includ: true },
             { name: "Partage de note", includ: true },
         ],
         recommended: true,
@@ -88,8 +88,8 @@ const pricing_plan_list: {
         price: 9, // + 0.99
         functions: [
             { name: "jusqu'a 1000 notes", includ: true },
-            { name: "jusqu'a 100 dossiers", includ: true },
-            { name: "Jeremy (100 message /jours max)", includ: true },
+            { name: "jusqu'a 100 tag", includ: true },
+            { name: "SilverAI (100 message /jours)", includ: true },
             { name: "Partage de note", includ: true },
         ],
         recommended: false,
@@ -100,8 +100,8 @@ const pricing_plan_list: {
         price: 19, // + 0.99
         functions: [
             { name: "notes illimités", includ: true },
-            { name: "dossiers illimités", includ: true },
-            { name: "Jeremy illimité", includ: true },
+            { name: "tag illimités", includ: true },
+            { name: "SilverAI illimité", includ: true },
             { name: "Partage de note", includ: true },
         ],
         recommended: false,
@@ -194,8 +194,8 @@ const plans: {
         hook: "Idéal pour les utilisateurs confirmés qui cherchent plus de capacité.",
         assets: [
             {
-                title: 'Jusqu\'à 200 Notes & 50 Dossiers',
-                description: 'Organisez vos idées et projets avec une capacité étendue pour toutes vos notes et dossiers.'
+                title: 'Jusqu\'à 200 Notes & 50 tag',
+                description: 'Organisez vos idées et projets avec une capacité étendue pour toutes vos notes et tag.'
             },
             {
                 title: 'Jeremy',
@@ -213,7 +213,7 @@ const plans: {
         hook: "Une offre avancée et sans prise de tête pour une gestion de notes simplifiée.",
         assets: [
             {
-                title: 'Jusqu\'à 1000 Notes & 100 Dossiers',
+                title: 'Jusqu\'à 1000 Notes & 100 tag',
                 description: 'Élargissez votre espace de travail avec une capacité massive pour toutes vos créations et classifications.'
             },
             {
@@ -232,8 +232,8 @@ const plans: {
                 description: 'Créez autant de notes que vous le souhaitez, sans aucune limite, pour ne jamais être à court d\'espace.'
             },
             {
-                title: 'Dossiers Illimités',
-                description: 'Organisez vos projets de manière exhaustive avec un nombre illimité de dossiers, selon vos besoins.'
+                title: 'tag Illimités',
+                description: 'Organisez vos projets de manière exhaustive avec un nombre illimité de tag, selon vos besoins.'
             },
             {
                 title: 'Jeremy Illimité',
@@ -243,9 +243,9 @@ const plans: {
     }
 };
 
-const api_url: string = 'http://localhost:3000'; // api.silvernote.fr
-const we_can_buy: boolean = true;
-const we_can_download: boolean = true;
+const api_url: string = 'https://api.silvernote.fr'; // http://localhost:3000 || https://api.silvernote.fr
+const we_can_buy: boolean = false;
+const we_can_download: boolean = false;
 
 export {
     function_list,
