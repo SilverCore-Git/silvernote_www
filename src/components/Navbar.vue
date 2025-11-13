@@ -1,12 +1,8 @@
 <script setup lang="ts">
-import navbar_config from "../config/navbar_config.json";
 import SButton from "./SButton.vue";
 
-const navbar_btn = navbar_config.btn;
 
-const button_contact = () => {
-    window.location.href = navbar_btn.href;
-};
+
 </script>
 
 <template>
@@ -24,10 +20,10 @@ const button_contact = () => {
                 >
                     <img 
                         class="h-[38px]"
-                        :src="navbar_config.logo" alt=""
+                        src="" 
                     
                     >
-                    <h3 class="ml-[8px] Heading_4">{{ navbar_config.title }}</h3>
+                    <h3 class="ml-[8px] Heading_4">test</h3>
                 </div>
 
                 <div 
@@ -35,12 +31,12 @@ const button_contact = () => {
 
                 >
 
-                    <a 
+                    <!-- <a 
                             v-for="Nav in navbar_config.tab"
                             class="text-white p-[15px] text-white cursor-pointer Body_XS"
                             :href="Nav.href"
                         
-                    >{{ Nav.name }}</a>
+                    >{{ Nav.name }}</a> -->
 
                 </div>
 
@@ -51,11 +47,7 @@ const button_contact = () => {
                 
                 >{{ btn.content }}</button> -->
 
-                <SButton
-                    :content= "navbar_btn.content"
-                    :href="navbar_btn.href"
-                    class="mr-[25px]"
-                />
+       
             </div>
 
 </template>
