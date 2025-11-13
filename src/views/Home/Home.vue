@@ -1,6 +1,6 @@
 <template>
     
-    <SmothScrollWraper>
+    <SmothScrollWraper class="bg">
         <Hero />
     </SmothScrollWraper>
 
@@ -13,3 +13,9 @@ import SmothScrollWraper from '../../components/smothScrollWraper.vue';
 
 
 </script>
+
+<style scoped>
+.bg {
+  background: linear-gradient(to bottom, #9dc1e6, #ecdfd1);
+}
+</style>

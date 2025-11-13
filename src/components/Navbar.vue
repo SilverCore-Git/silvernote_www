@@ -1,56 +1,53 @@
 <script setup lang="ts">
 import SButton from "./SButton.vue";
 
+const navbar_config = [
+  { name: "Accueil", href: "/" },
+  { name: "Fonctionnalités", href: "/features" },
+  { name: "Collaboratif", href: "/collab" },
+  { name: "Blog", href: "/blog" },
+  { name: "Contact", href: "/contact" }
+];
 
+const btn = { content: "Essayer Silvernote", href: "/signup" };
 
+const button_contact = () => {
+  window.location.href = btn.href;
+};
 </script>
 
 <template>
-            <div 
-                class="
-                        fixed top-6 inset-x-[10%] 2xl:inset-x-[20%] z-50
-                        rounded-[7px] flex justify-between items-center 
-                        border border-gray-400/50 bg-black/70 backdrop-blur-sm
-                    "
+    <nav
 
+        class="fixed top-6 left-0 right-0 mx-auto max-w-[1200px] z-50
+            bg-white/0 backdrop-blur-md rounded-[100px] flex justify-between items-center p-2 shadow-none"
+    >
+        <div class="flex items-center gap-2">
+            <img
+                src="/assets/logo/snote/favicon.svg"
+                alt="Silvernote Logo"
+                class="h-6 w-6"
+            />
+            <span class="text-[20px] font-semibold text-[#1A1615]">Silvernote</span>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <a
+                v-for="tab in navbar_config"
+                :key="tab.name"
+                :href="tab.href"
+                class="text-[#1A1615] rounded-full px-3 py-2 hover:bg-gray-100 transition"
             >
-                <div
-                    class="center justify-around cursor-pointer ml-[25px]"
+                {{ tab.name }}
+            </a>
+        </div>
 
-                >
-                    <img 
-                        class="h-[38px]"
-                        src="" 
-                    
-                    >
-                    <h3 class="ml-[8px] Heading_4">test</h3>
-                </div>
+        <SButton
+            @click="button_contact"
+            :content="btn.content"
+        />
 
-                <div 
-                    class="center my-[5px]"
-
-                >
-
-                    <!-- <a 
-                            v-for="Nav in navbar_config.tab"
-                            class="text-white p-[15px] text-white cursor-pointer Body_XS"
-                            :href="Nav.href"
-                        
-                    >{{ Nav.name }}</a> -->
-
-                </div>
-
-                <!-- <button
-                    @click="button_contact"
-                    class="btn_basic center mr-[25px]"
-                    :href="btn.href"
-                
-                >{{ btn.content }}</button> -->
-
-       
-            </div>
+    </nav>
 
 </template>
 
-
-<style scoped></style>
