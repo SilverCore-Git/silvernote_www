@@ -19,14 +19,14 @@ const button_contact = () => {
 <template>
     <nav
 
-        class="fixed top-6 left-0 right-0 mx-auto max-w-[1200px] z-50
-            bg-white/0 backdrop-blur-md rounded-[100px] flex justify-between items-center p-2 shadow-none"
+        class="fixed top-6 left-0 right-0 mx-auto max-w-[1200px] z-50 p-2 shadow-none
+            bg-white/10 backdrop-blur-md rounded-[100px] flex justify-between items-center "
     >
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2 ml-2">
             <img
                 src="/assets/logo/snote/favicon.svg"
                 alt="Silvernote Logo"
-                class="h-6 w-6"
+                class="w-6"
             />
             <span class="text-[20px] font-semibold text-[#1A1615]">Silvernote</span>
         </div>
