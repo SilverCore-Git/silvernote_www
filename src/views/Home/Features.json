@@ -1,0 +1,35 @@
+[
+  {
+    "img": "/assets/img/silveria_screen.webp",
+    "subject": "SilverIA",
+    "title": "SilverIA, votre agent IA",
+    "description": "Fatigué de perdre du temps à organiser vos idées ? SilverAI est là pour ça ! Notre assistant intelligent est directement intégré à SilverNote et à silvercore pour transformer la manière dont vous travaillez.",
+    "btn": {
+      "href": "https://app.silvernote.fr/",
+      "content": "Essayer silvernote"
+    },
+    "features": [
+      { "icon": "bi-tags", "title": "Edition des tags" },
+      { "icon": "bi-life-preserver", "title": "Assistance" },
+      { "icon": "bi-journal-text", "title": "Edition des notes" },
+      { "icon": "bi-search", "title": "Recherche" }
+    ]
+  },
+
+  {
+    "img": "/assets/img/editor_screen.webp",
+    "subject": "markdown",
+    "title": "Edition markdown",
+    "description": "Mettez en forme vos idées, vos projets simplement avec l'édition markdown.",
+    "btn": {
+      "href": "https://app.silvernote.fr/",
+      "content": "Essayer silvernote"
+    },
+    "features": [
+      { "icon": "bi-type", "title": "Titres" },
+      { "icon": "bi-list", "title": "Listes" },
+      { "icon": "bi-type-bold", "title": "Gras" },
+      { "icon": "bi-type-italic", "title": "Italique" }
+    ]
+  }
+]
