@@ -9,13 +9,13 @@
     @mouseenter="hovered = true"
     @mouseleave="hovered = false"
   >
-    <div class="mx-4.5 my-2.5 overflow-hidden">
+    <div class="mx-5 my-3 overflow-hidden">
       <div
         class="
               flex flex-col items-start
-              transition-transform duration-200 max-h-7 gap-3
+              transition-transform duration-200 max-h-8 gap-3
             "
-        :style="{ transform: hovered ? 'translateY(-150%)' : 'translateY(0)' }"
+        :style="{ transform: hovered ? 'translateY(-120%)' : 'translateY(0)' }"
       >
         <span 
           v-for="i in 2"
