@@ -1,6 +1,6 @@
 <template>
 
-    <section class="bg-white py-18 flex flex-col justify-center items-center text-center gap-6">
+    <section class="bg-white flex flex-col justify-center items-center text-center gap-6">
 
         <span class="uppercase text-[15px] font-semibold text-gray-600">
             Travaille synchronisé
