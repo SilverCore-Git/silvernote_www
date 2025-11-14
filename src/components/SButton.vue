@@ -3,8 +3,8 @@
     :href="href"
     :class="nobg ? 'bg-white/10 hover:bg-white/20 text-black' : 'bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white'"
     class="
-      font-semibold rounded-full  
-      transition-all duration-300 cursor-pointer text-lg
+      font-semibold rounded-full  text-lg
+      transition-all duration-300 cursor-pointer 
     "
     @mouseenter="hovered = true"
     @mouseleave="hovered = false"
