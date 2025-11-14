@@ -6,7 +6,7 @@ import SButton from "../../components/SButton.vue";
 
 gsap.registerPlugin(ScrollTrigger);
 
-onMounted(async () => {
+onMounted(async (): Promise<void> => {
 
     await nextTick();
 
@@ -16,6 +16,7 @@ onMounted(async () => {
         y: -80,
         opacity: 1,
         scale: 0.8,
+        zIndex: 10,
         transformOrigin: "center center",
     });
 
@@ -26,6 +27,7 @@ onMounted(async () => {
         opacity: 1,
         scale: 1,
         ease: "none",
+        zIndex: 10,
 
         scrollTrigger: {
             trigger: ".hero-img",
@@ -47,7 +49,7 @@ onMounted(async () => {
 <template>
 
     <section 
-        class="flex justify-center items-center flex-col pt-[13%] bg shadow"
+        class="flex justify-center items-center flex-col pt-40 bg shadow z-20"
     >
         <div 
             class="max-w-5xl text-center flex justify-center items-center flex-col gap-6"
