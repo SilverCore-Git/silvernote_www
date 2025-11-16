@@ -6,14 +6,11 @@ const navbar_config = [
   { name: "Fonctionnalités", href: "/features" },
   { name: "Collaboratif", href: "/collab" },
   { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "/contact" }
+  { name: "Contact", href: "/contact" },
 ];
 
-const btn = { content: "Essayer Silvernote", href: "/signup" };
+const btn = { content: "Télécharger", href: "/download" };
 
-const button_contact = () => {
-  window.location.href = btn.href;
-};
 </script>
 
 <template>
@@ -43,8 +40,8 @@ const button_contact = () => {
         </div>
 
         <SButton
-            @click="button_contact"
             :content="btn.content"
+            :href="btn.href"
         />
 
     </nav>

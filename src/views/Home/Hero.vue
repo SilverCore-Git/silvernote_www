@@ -6,7 +6,7 @@ import SButton from "../../components/SButton.vue";
 
 gsap.registerPlugin(ScrollTrigger);
 
-onMounted(async (): Promise<void> => {
+onMounted(async () => {
 
     await nextTick();
 
@@ -55,7 +55,7 @@ onMounted(async (): Promise<void> => {
             class="max-w-5xl text-center flex justify-center items-center flex-col gap-6"
         >
 
-            <h1 class="max-w-4xl">
+            <h1 class="max-w-4xl " style="line-height: 110%;">
                 Vos notes <span class="text-(--primary)">accessibles</span> <span class="text-(--primary)">partout</span> et simplement
             </h1>
 
@@ -67,9 +67,11 @@ onMounted(async (): Promise<void> => {
             <div class="flex justify-center items-center my-8 gap-4">
                 <SButton
                     content="Essayer silvernote"
+                    href="/app"
                 />
                 <SButton
                     content="Voir les fonctionalités"
+                    href="#features"
                     :nobg="true"
                 />
             </div>

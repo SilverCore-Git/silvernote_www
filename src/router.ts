@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from './views/Home/Home.vue';
+import App from './views/redirect/app.vue';
+import Download from './views/Download/Download.vue';
 
 
 const routes = [
@@ -7,7 +9,20 @@ const routes = [
     path: '/', 
     name: 'Home', 
     component: Home,
-    meta: { title: 'Accueil - Silvercore' }
+    meta: { title: 'Accueil - Silvernote' }
+  },
+  { 
+    path: '/download', 
+    name: 'Download', 
+    component: Download,
+    meta: { title: 'Télécharger - Silvernote' }
+  },
+
+  { 
+    path: '/app', 
+    name: 'redirect-app', 
+    component: App,
+    meta: { title: 'redirection - Silvernote' }
   }
 ]
 
