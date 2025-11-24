@@ -28,7 +28,7 @@
                     </p>
 
                     <Compteur 
-                        target-date="Nov 28, 2025 18:00:00 UTC+1"
+                        target-date="Jan 05, 2026 18:00:00 UTC+1"
                     />
 
                     <div class=" flex flex-col sm:flex-row justify-center items-center">
