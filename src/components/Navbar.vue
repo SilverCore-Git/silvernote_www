@@ -3,9 +3,9 @@ import SButton from "./SButton.vue";
 
 const navbar_config = [
   { name: "Accueil", href: "/" },
-  { name: "Fonctionnalités", href: "/features" },
-  { name: "Collaboratif", href: "/collab" },
-  { name: "Blog", href: "/blog" },
+  { name: "Fonctionnalités", href: "#features" },
+  { name: "Collaboratif", href: "#collab" },
+  { name: "Blog", href: "#blog" },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -29,14 +29,20 @@ const btn = { content: "Télécharger", href: "/download" };
         </div>
 
         <div class="flex items-center gap-4">
-            <a
+            <!-- <a
                 v-for="tab in navbar_config"
                 :key="tab.name"
                 :href="tab.href"
                 class="text-[#1A1615] rounded-full px-3 py-2 hover:bg-gray-100 transition"
             >
                 {{ tab.name }}
-            </a>
+            </a> -->
+            <SButton
+                v-for="tab in navbar_config"
+                :nobg="true"
+                :content="tab.name"
+                :href="tab.href"
+            />
         </div>
 
         <SButton

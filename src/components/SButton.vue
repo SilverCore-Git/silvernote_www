@@ -42,6 +42,7 @@ const router = useRouter();
 const hovered = ref<boolean>(false);
 
 const open = (href: string) => {
+  if (href === 'none') return;
   if (href.startsWith('#'))
   {
     const el = document.getElementById(href.replace('#', ''));
@@ -53,7 +54,7 @@ const open = (href: string) => {
   }
   else
   {
-    if ([ '/', '/download' ].includes(href)) return router.push(href);
+    if ([ '/', '/download', '/app' ].includes(href)) return router.push(href);
     window.location.href = href;
   }
 }

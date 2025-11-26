@@ -16,7 +16,6 @@ onMounted(async () => {
         y: -80,
         opacity: 1,
         scale: 0.8,
-        zIndex: 10,
         transformOrigin: "center center",
     });
 
@@ -27,7 +26,6 @@ onMounted(async () => {
         opacity: 1,
         scale: 1,
         ease: "none",
-        zIndex: 10,
 
         scrollTrigger: {
             trigger: ".hero-img",
@@ -76,9 +74,9 @@ onMounted(async () => {
                 />
             </div>
 
-            <div class=" perspective-[2000px]">
+            <div class=" z-10 perspective-[2000px]">
                 <img 
-                    class="rounded-2xl hero-img "
+                    class="rounded-2xl hero-img z-10"
                     src="/assets/img/silvernote_desktop_screen.png"
                 />
             </div>

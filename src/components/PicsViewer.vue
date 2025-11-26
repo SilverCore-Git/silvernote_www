@@ -58,11 +58,13 @@ function moveRight() {
         @click="moveLeft"
         :nobg="currentIndex === totalSlides - 1"
         content="Mobile App"
+        href="none"
       />
       <SButton
         @click="moveRight"
         :nobg="currentIndex === 0"
         content="Web App"
+        href="none"
       />
     </div>
 
