@@ -27,9 +27,9 @@
                         <br>Projet en développement, beta gratuite disponible.
                     </p>
 
-                    <Compteur 
+                    <!-- <Compteur 
                         target-date="Jan 05, 2026 18:00:00 UTC+1"
-                    />
+                    /> -->
 
                     <div class=" flex flex-col sm:flex-row justify-center items-center">
                         
@@ -320,7 +320,7 @@ import Footer from '../components/Footer.vue';
 import { SignedIn, SignedOut } from '@clerk/vue';
 import SilverAI from '../components/section/SilverAI.vue';
 import Multi_platform from '../components/section/Multi_platform.vue';
-import Compteur from '../lib/silvernote-vue/components/Compteur.vue';
+// import Compteur from '../lib/silvernote-vue/components/Compteur.vue';
 
 
 const selected_mode_for = ref<number>(1);
