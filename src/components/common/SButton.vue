@@ -1,13 +1,15 @@
 <template>
   <button
     @click="open(href)"
-    :class="nobg ? 'bg-white/10 hover:bg-white/20 text-black' : 'bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white'"
+    :class="nobg ? 'bg-white/10 hover:bg-white/20 text-black border-2 border-white/30' : 'bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white shadow-lg hover:shadow-xl'"
     class="
-      font-semibold rounded-full  text-lg
+      font-semibold rounded-full text-lg
       transition-all duration-300 cursor-pointer 
+      active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--primary)]
     "
     @mouseenter="hovered = true"
     @mouseleave="hovered = false"
+    :aria-label="content"
   >
     <div class="mx-5 my-3 overflow-hidden">
       <div
@@ -54,7 +56,7 @@ const open = (href: string) => {
   }
   else
   {
-    if ([ '/', '/download', '/app' ].includes(href)) return router.push(href);
+    if ([ '/', '/download', '/app', '/contact' ].includes(href)) return router.push(href);
     window.location.href = href;
   }
 }

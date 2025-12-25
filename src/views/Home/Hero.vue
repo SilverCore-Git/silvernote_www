@@ -2,7 +2,7 @@
 import { onMounted, nextTick } from "vue";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SButton from "../../components/SButton.vue";
+import { SButton } from "@/components";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,37 +47,59 @@ onMounted(async () => {
 <template>
 
     <section 
-        class="flex justify-center items-center flex-col pt-40 bg shadow z-20"
+        class="flex justify-center items-center flex-col pt-36 pb-20 bg shadow z-20 px-4"
     >
         <div 
-            class="max-w-5xl text-center flex justify-center items-center flex-col gap-6"
+            class="max-w-5xl text-center flex justify-center items-center flex-col gap-8"
         >
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/20 rounded-full backdrop-blur-md">
+                <span class="text-sm font-medium text-[#1A1615]">✨ Nouvelle version bientôt</span>
+            </div>
 
-            <h1 class="max-w-4xl " style="line-height: 110%;">
+            <h1 class="max-w-4xl text-4xl md:text-6xl lg:text-7xl" style="line-height: 110%;">
                 Vos notes <span class="text-(--primary)">accessibles</span> <span class="text-(--primary)">partout</span> et simplement
             </h1>
 
-            <p class="mb-4 text-[20px]">
+            <p class="mb-4 text-lg md:text-xl text-gray-700 max-w-3xl">
                 SilverNote est l'application de prise de notes simple et intuitive conçue pour vous,
-                <br />disponible sur mobile, PC et en tant qu'application web.
+                disponible sur mobile, PC et en tant qu'application web. Synchronisation en temps réel,
+                collaboration fluide et sécurité garantie.
             </p>
 
-            <div class="flex justify-center items-center my-8 gap-4">
+            <!-- Stats -->
+            <div class="grid grid-cols-3 gap-4 md:gap-8 my-6">
+                <div class="text-center">
+                    <p class="text-2xl md:text-3xl font-bold text-(--primary)">10K+</p>
+                    <p class="text-sm md:text-base text-gray-600">Utilisateurs actifs</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-2xl md:text-3xl font-bold text-(--primary)">50K+</p>
+                    <p class="text-sm md:text-base text-gray-600">Notes créées</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-2xl md:text-3xl font-bold text-(--primary)">99.9%</p>
+                    <p class="text-sm md:text-base text-gray-600">Disponibilité</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center my-8 gap-4">
                 <SButton
                     content="Essayer silvernote"
                     href="/app"
                 />
                 <SButton
-                    content="Voir les fonctionalités"
+                    content="Voir les fonctionnalités"
                     href="#features"
                     :nobg="true"
                 />
             </div>
 
-            <div class=" z-10 perspective-[2000px]">
+            <div class="z-10 perspective-[2000px] w-full max-w-2xl">
                 <img 
-                    class="rounded-2xl hero-img z-10"
+                    class="rounded-2xl hero-img z-10 w-full shadow-2xl"
                     src="/assets/img/silvernote_desktop_screen.png"
+                    alt="SilverNote Interface"
                 />
             </div>
 

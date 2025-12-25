@@ -59,7 +59,7 @@
 <script setup lang="ts">
 
 import { onMounted, ref } from 'vue';
-import SButton from '../../components/SButton.vue';
+import { SButton } from '@/components';
 
 const detectOS = (): "windows" | "macos" | "linux" | "android" | "ios" => {
   const ua = navigator.userAgent.toLowerCase();

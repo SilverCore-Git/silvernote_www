@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from './views/Home/Home.vue';
 import App from './views/redirect/app.vue';
 import Download from './views/Download/Download.vue';
+import Contact from './views/Contact/Contact.vue';
+import NotFound from './views/NotFound/NotFound.vue';
 
 
 const routes = [
@@ -17,12 +19,23 @@ const routes = [
     component: Download,
     meta: { title: 'Télécharger - Silvernote' }
   },
-
+  { 
+    path: '/contact', 
+    name: 'Contact', 
+    component: Contact,
+    meta: { title: 'Contactez-nous - Silvernote' }
+  },
   { 
     path: '/app', 
     name: 'redirect-app', 
     component: App,
     meta: { title: 'redirection - Silvernote' }
+  },
+  { 
+    path: '/:pathMatch(.*)*', 
+    name: 'NotFound', 
+    component: NotFound,
+    meta: { title: 'Page non trouvée - Silvernote' }
   }
 ]
 

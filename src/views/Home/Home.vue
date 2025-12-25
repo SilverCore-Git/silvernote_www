@@ -1,26 +1,25 @@
 <template>
     
-    <SmothScrollWraper>
+    <SmothScrollWrapper>
         <div class="space-y-40">
             <Hero />
             <SyncWork />
             <Features />
             <Colab />
+            <TestimonialsSection />
+            <PricingSection />
+            <FAQSection />
             <UseSnote />
             <div class="h-120"></div>
         </div>
-    </SmothScrollWraper>
+    </SmothScrollWrapper>
 
 </template>
 
 <script lang="ts" setup>
-
 import Hero from './Hero.vue';
-import SmothScrollWraper from '../../components/smothScrollWraper.vue';
 import SyncWork from './syncWork.vue';
 import Features from './Features.vue';
 import Colab from './Colab.vue';
-import UseSnote from '../../components/UseSnote.vue';
-
-
+import { SmothScrollWrapper, TestimonialsSection, PricingSection, FAQSection, UseSnote } from '@/components';
 </script>
