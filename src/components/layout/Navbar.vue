@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import SButton from "./SButton.vue";
+import { SButton } from "@/components/common";
 
 const navbar_config = [
   { name: "Accueil", href: "/" },

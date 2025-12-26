@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import FeaturesSection from '@/components/FeaturesSection.vue';
+import { FeaturesSection } from '@/components';
 import Features_config from './Features.json';
 
 </script>

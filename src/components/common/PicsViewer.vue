@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref, computed } from 'vue';
-import SButton from './SButton.vue';
+import { SButton } from '@/components/common';
 
 const props = defineProps({
   mobileImg: String,

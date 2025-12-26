@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SButton from './SButton.vue';
+import { SButton } from '@/components/common';
 
 </script>
 

@@ -28,6 +28,6 @@
 </template>
 
 <script lang="ts" setup>
-import PicsViewer from '@/components/PicsViewer.vue';
+import { PicsViewer } from '@/components/common';
 
 </script>

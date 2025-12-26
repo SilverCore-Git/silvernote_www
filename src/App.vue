@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Navbar, Footer } from '@/components/layout';
+import { Navbar, Footer } from '@/components';
 </script>
 
 <template>

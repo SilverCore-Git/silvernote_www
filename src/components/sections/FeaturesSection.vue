@@ -69,9 +69,8 @@
 </template>
 
 <script lang="ts" setup>
-import ImgWrapper from './ImgWrapper.vue';
-import SButton from './SButton.vue';
-
+    
+import { SButton, ImgWrapper } from "@/components";
 
 defineProps<{
     prop: {
