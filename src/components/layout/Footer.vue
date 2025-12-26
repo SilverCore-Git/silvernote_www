@@ -4,9 +4,9 @@
         
         <div class="max-w-6xl mx-auto">
             <!-- Main footer content -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            <div class="flex justify-between items-center mb-12 flex-col lg:flex-row gap-12 lg:gap-0">
                 <!-- Brand section -->
-                <div class="footer-brand md:col-span-1 flex flex-col gap-4">
+                <div class="footer-brand md:col-span-1 flex flex-col gap-4 max-w-lg">
                     <a href="./" class="flex items-center gap-2">
                         <img 
                             src="/assets/logo/snote/favicon.svg"
@@ -38,37 +38,41 @@
                     </div>
                 </div>
 
-                <!-- Product -->
-                <div class="footer-section flex flex-col gap-4">
-                    <h4 class="font-bold text-gray-900">Produit</h4>
-                    <ul class="footer-links flex flex-col gap-2">
-                        <li><a href="#features" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Fonctionnalités</a></li>
-                        <li><a href="/download" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Télécharger</a></li>
-                        <li><a href="/#pricing" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Tarification</a></li>
-                        <li><a href="/blog" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Blog</a></li>
-                    </ul>
-                </div>
+                <div class="flex justify-between items-center flex-raw max-w-lg w-full">
 
-                <!-- Company -->
-                <div class="footer-section flex flex-col gap-4">
-                    <h4 class="font-bold text-gray-900">Entreprise</h4>
-                    <ul class="footer-links flex flex-col gap-2">
-                        <li><a href="https://www.silvercore.fr/" target="_blank" rel="noopener" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">SilverCore</a></li>
-                        <li><a href="https://www.silvertransfert.fr/" target="_blank" rel="noopener" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">SilverTransfert</a></li>
-                        <li><a href="/about" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">À propos</a></li>
-                        <li><a href="/careers" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Carrières</a></li>
-                    </ul>
-                </div>
+                    <!-- Product -->
+                    <div class="footer-section flex flex-col gap-4">
+                        <h4 class="font-bold text-gray-900">Produit</h4>
+                        <ul class="footer-links flex flex-col gap-2">
+                            <li><a href="#features" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Fonctionnalités</a></li>
+                            <li><a href="/download" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Télécharger</a></li>
+                            <li><a href="/#pricing" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Tarification</a></li>
+                            <li><a href="/blog" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Blog</a></li>
+                        </ul>
+                    </div>
 
-                <!-- Legal & Support -->
-                <div class="footer-section flex flex-col gap-4">
-                    <h4 class="font-bold text-gray-900">Support</h4>
-                    <ul class="footer-links flex flex-col gap-2">
-                        <li><a href="mailto:support@silvernote.fr" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Support</a></li>
-                        <li><a href="/terms-of-use" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Conditions</a></li>
-                        <li><a href="/privacy" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Confidentialité</a></li>
-                        <li><a href="/contact" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Contact</a></li>
-                    </ul>
+                    <!-- Company -->
+                    <div class="footer-section flex flex-col gap-4">
+                        <h4 class="font-bold text-gray-900">Nous sommes aussi</h4>
+                        <ul class="footer-links flex flex-col gap-2">
+                            <li><a href="https://www.silvercore.fr/" target="_blank" rel="noopener" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Silvercore</a></li>
+                            <li><a href="https://www.silvertransfert.fr/" target="_blank" rel="noopener" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Silvertransfert</a></li>
+                            <li><a href="" target="_blank" rel="noopener" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">‎ </a></li>
+                            <li><a href="" target="_blank" rel="noopener" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">‎ </a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Legal & Support -->
+                    <div class="footer-section flex flex-col gap-4">
+                        <h4 class="font-bold text-gray-900">Support</h4>
+                        <ul class="footer-links flex flex-col gap-2">
+                            <li><a href="mailto:support@silvernote.fr" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Support</a></li>
+                            <li><a href="/terms-of-use" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Conditions</a></li>
+                            <li><a href="/privacy" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Confidentialité</a></li>
+                            <li><a href="/contact" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Contact</a></li>
+                        </ul>
+                    </div>
+
                 </div>
                 
             </div>

@@ -10,6 +10,16 @@ import SnoteStatus from "../../components/common/SnoteStatus.vue";
 const version = ref<string>('');
 const showSStatus = ref<boolean>(false);
 
+let canToggleSStatus = true;
+const toggleSStatus = () => {
+    if (!canToggleSStatus) return;
+    canToggleSStatus = false;
+    showSStatus.value = !showSStatus.value;
+    setTimeout(() => {
+        canToggleSStatus = true;
+    }, 100);
+};
+
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(async () => {
@@ -113,9 +123,9 @@ onMounted(async () => {
                 class="
                     hero-badge inline-flex items-center gap-2
                     px-4 py-2 bg-white/20 rounded-full 
-                    backdrop-blur-md cursor-pointer
+                    backdrop-blur-md cursor-pointer z-10
                 "
-                @click="showSStatus = !showSStatus"
+                @mouseenter="toggleSStatus"
             >
                 <span class="text-sm font-medium text-[#1A1615]">✨ Version {{ version }}</span>
             </div>
@@ -128,7 +138,8 @@ onMounted(async () => {
             <div
                 class="fixed inset-0 z-5"
                 @click="showSStatus = false"
-                v-if="showSStatus"    
+                v-if="showSStatus"
+                @mouseenter="toggleSStatus"
             ></div>
 
             <h1 class="hero-title max-w-4xl text-4xl md:text-6xl lg:text-7xl" style="line-height: 110%;">
