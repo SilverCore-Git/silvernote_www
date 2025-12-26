@@ -30,8 +30,10 @@
                     </p>
 
                     <SButton
-                        :href="prop.btn.href || 'https://app.silvernote.fr/'"
-                        :content="prop.btn.content || 'Essayer silvernote'"
+                        :href="prop.btn?.href.startsWith('https://app.silvernote.fr') 
+                                ? '/redirect/' + openApp({ utm_medium: `features-${prop.subject}`, type: 'href' })
+                                : prop.btn?.href"
+                        :content="prop.btn?.content || 'Essayer silvernote'"
                         class="w-fit"
                     />
 
@@ -71,6 +73,7 @@
 <script lang="ts" setup>
     
 import { SButton, ImgWrapper } from "@/components";
+import openApp from "../../utils/openApp";
 
 defineProps<{
     prop: {
