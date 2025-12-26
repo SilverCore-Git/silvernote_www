@@ -125,6 +125,12 @@ onMounted(async () => {
                 class="absolute top-16"
             />
 
+            <div
+                class="fixed inset-0 z-5"
+                @click="showSStatus = false"
+                v-if="showSStatus"    
+            ></div>
+
             <h1 class="hero-title max-w-4xl text-4xl md:text-6xl lg:text-7xl" style="line-height: 110%;">
                 Vos notes <span class="text-[var(--primary)]">accessibles</span> <span class="text-[var(--primary)]">partout</span> et simplement
             </h1>

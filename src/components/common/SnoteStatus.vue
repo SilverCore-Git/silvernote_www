@@ -5,7 +5,7 @@
       class="z-50 bg-white/30 backdrop-blur-xl border border-gray-200 rounded-2xl p-6 w-full max-w-md shadow-md"
     >
       <h3 class="text-lg font-bold mb-4">
-        Statut de SilverNote
+        Statut de Silvernote
       </h3>
 
       <div class="flex flex-col gap-3">
@@ -54,17 +54,11 @@
 <script setup lang="ts">
 
 import { useStatus } from '@/composables/useStatus'
-import { onMounted } from 'vue';
 
 const {
   snoteStatus,
   loading,
-  formattedDate,
-  refreshStatus,
+  formattedDate
 } = useStatus();
-
-onMounted(() => {
-  setInterval(() => refreshStatus(true), 10 * 1000);
-});
 
 </script>
