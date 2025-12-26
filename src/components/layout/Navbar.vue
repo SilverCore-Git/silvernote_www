@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted, nextTick } from "vue";
 import { SButton } from "@/components/common";
+import gsap from "gsap";
 
 const navbar_config = [
   { name: "Accueil", href: "/" },
@@ -16,14 +17,64 @@ const closeMobileMenu = () => {
   mobileMenuOpen.value = false;
 };
 
+onMounted(async () => {
+  await nextTick();
+
+  // Animation de la navbar au chargement
+  gsap.from("nav", {
+    opacity: 0,
+    y: -40,
+    duration: 0.8,
+    ease: "back.out",
+    delay: 0.1,
+  });
+
+  // Animation du logo
+  gsap.from(".navbar-logo", {
+    opacity: 0,
+    scale: 0.8,
+    x: -30,
+    duration: 0.6,
+    ease: "back.out",
+    delay: 0.2,
+  });
+
+  // Animation des boutons du menu desktop
+  gsap.from(".navbar-menu-desktop > *", {
+    opacity: 0,
+    y: -20,
+    duration: 0.5,
+    stagger: 0.08,
+    ease: "power2.out",
+    delay: 0.4,
+  });
+
+  // Animation du bouton télécharger
+  gsap.from(".navbar-download-btn", {
+    opacity: 0,
+    x: 30,
+    duration: 0.6,
+    ease: "power2.out",
+    delay: 0.6,
+  });
+
+  // Animation du bouton mobile menu
+  gsap.from(".navbar-mobile-btn", {
+    opacity: 0,
+    scale: 0.5,
+    duration: 0.5,
+    ease: "back.out",
+    delay: 0.5,
+  });
+});
 </script>
 
 <template>
     <nav
-        class="fixed top-6 left-0 right-0 mx-auto max-w-[1200px] z-50 p-4 md:p-2 shadow-none
+        class="navbar fixed top-6 left-0 right-0 mx-auto max-w-[1200px] z-50 p-4 md:p-2 shadow-none
             bg-white/10 backdrop-blur-3xl rounded-[100px] flex justify-between items-center transition-all duration-300"
     >
-        <div class="flex items-center gap-2 ml-2">
+        <div class="navbar-logo flex items-center gap-2 ml-2">
             <img
                 src="/assets/logo/snote/favicon.svg"
                 alt="Silvernote Logo"
@@ -33,7 +84,7 @@ const closeMobileMenu = () => {
         </div>
 
         <!-- Menu Desktop -->
-        <div class="hidden md:flex items-center gap-4">
+        <div class="navbar-menu-desktop hidden md:flex items-center gap-4">
             <SButton
                 v-for="tab in navbar_config"
                 :key="tab.name"
@@ -45,14 +96,14 @@ const closeMobileMenu = () => {
 
         <!-- Bouton Télécharger Desktop -->
         <SButton
-            class="hidden md:block"
+            class="navbar-download-btn hidden md:block"
             :content="btn.content"
             :href="btn.href"
         />
 
         <!-- Mobile Menu Button -->
         <button
-            class="md:hidden flex items-center justify-center w-10 h-10 rounded-full hover:bg-white/20 transition-colors"
+            class="navbar-mobile-btn md:hidden flex items-center justify-center w-10 h-10 rounded-full hover:bg-white/20 transition-colors"
             @click="mobileMenuOpen = !mobileMenuOpen"
             aria-label="Toggle menu"
         >

@@ -2,14 +2,14 @@
   <section id="collab" class="py-16 md:py-20 px-4">
     <div class="max-w-6xl mx-auto">
       <!-- Header -->
-      <div class="text-center mb-12 md:mb-16">
-        <p class="text-[var(--primary)] font-medium uppercase tracking-wide text-base md:text-lg">
+      <div class="text-center mb-12 md:mb-16 collab-header">
+        <p class="collab-badge text-[var(--primary)] font-medium uppercase tracking-wide text-base md:text-lg">
           {{ collaborationConfig.section.subtitle }}
         </p>
-        <h2 class="text-3xl md:text-5xl font-bold mt-3 leading-tight">
+        <h2 class="collab-title text-3xl md:text-5xl font-bold mt-3 leading-tight">
           {{ collaborationConfig.section.title }}
         </h2>
-        <p class="text-gray-700 text-base md:text-lg mt-4 max-w-2xl mx-auto">
+        <p class="collab-description text-gray-700 text-base md:text-lg mt-4 max-w-2xl mx-auto">
           {{ collaborationConfig.section.description }}
         </p>
       </div>
@@ -20,7 +20,7 @@
           v-for="card in collaborationConfig.cards"
           :key="card.id"
           :to="`/collaboration/${card.slug}`"
-          class="group p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-xl bg-white transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+          class="collab-card group p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-xl bg-white transition-all duration-300 hover:-translate-y-1 cursor-pointer"
         >
           <div :class="`mb-6 flex items-center justify-center h-32 bg-gradient-to-br from-${card.icon.color}-100 to-${card.icon.color}-50 rounded-xl overflow-hidden`">
             <svg :class="`w-16 h-16 text-${card.icon.color}-500`" fill="currentColor" viewBox="0 0 20 20">
@@ -55,7 +55,7 @@
       </div>
 
       <!-- Quick Features list -->
-      <div class="mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div class="collab-quick-features mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <div v-for="feature in collaborationConfig.quickFeatures" :key="feature.title" class="flex items-start gap-4">
           <div class="flex-shrink-0 w-6 h-6 text-[var(--primary)] mt-1">
             <svg fill="currentColor" viewBox="0 0 20 20">
@@ -73,5 +73,35 @@
 </template>
 
 <script lang="ts" setup>
+  
+import { onMounted, nextTick } from 'vue';
+import gsap from 'gsap';
 import collaborationConfig from '@/configs/collaboration.json';
+
+onMounted(async () => {
+  await nextTick();
+  
+  // Header animations
+  gsap.from('.collab-badge', { opacity: 0, y: 10, duration: 0.6, ease: 'power3.out', delay: 0.3 });
+  gsap.from('.collab-title', { opacity: 0, y: 30, duration: 0.8, ease: 'power3.out', delay: 0.5 });
+  gsap.from('.collab-description', { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out', delay: 0.7 });
+  
+  // Cards animation (staggered)
+  gsap.from('.collab-card', { opacity: 0, y: 40, duration: 0.6, stagger: 0.12, ease: 'back.out', delay: 0.9 });
+  
+  // Quick features animation
+  gsap.from('.collab-quick-features > div', { opacity: 0, y: 20, duration: 0.5, stagger: 0.08, ease: 'power3.out', delay: 1.5 });
+  
+  // Hover effects on cards
+  const cards = document.querySelectorAll('.collab-card');
+  cards.forEach((card) => {
+    card.addEventListener('mouseenter', () => {
+      gsap.to(card, { y: -8, duration: 0.3, ease: 'power2.out' });
+    });
+    card.addEventListener('mouseleave', () => {
+      gsap.to(card, { y: 0, duration: 0.3, ease: 'power2.out' });
+    });
+  });
+});
+
 </script>

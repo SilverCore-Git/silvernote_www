@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted, nextTick } from "vue";
+import gsap from "gsap";
 import { SButton } from "@/components";
 import { emailService, type ContactFormData } from "@/services";
 import { useNotification } from "@/composables";
@@ -61,13 +62,29 @@ const submitForm = async () => {
     isSubmitting.value = false;
   }
 };
+
+onMounted(async () => {
+  await nextTick();
+  
+  // Header animations
+  gsap.from('.contact-header', { opacity: 0, y: 30, duration: 0.8, ease: 'power3.out', delay: 0.2 });
+  gsap.from('.contact-header h1', { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out', delay: 0.3 });
+  gsap.from('.contact-header p', { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out', delay: 0.5 });
+  
+  // Contact info animation
+  gsap.from('.contact-info-item', { opacity: 0, x: -30, duration: 0.6, stagger: 0.1, ease: 'power3.out', delay: 0.7 });
+  
+  // Form animation
+  gsap.from('.contact-form-group', { opacity: 0, y: 20, duration: 0.5, stagger: 0.08, ease: 'power3.out', delay: 1.1 });
+  gsap.from('.contact-form-submit', { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out', delay: 1.6 });
+});
 </script>
 
 <template>
   <div class="min-h-screen bg-gradient-to-b from-white/50 to-white/25 pt-32 pb-20 px-4">
     <div class="max-w-4xl mx-auto">
       <!-- Header -->
-      <div class="text-center mb-12">
+      <div class="contact-header text-center mb-12">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">Contactez-nous</h1>
         <p class="text-lg text-gray-700 max-w-2xl mx-auto">
           Vous avez des questions ? Nous sommes là pour vous aider.
@@ -80,7 +97,7 @@ const submitForm = async () => {
         <div class="md:col-span-1">
           <div class="space-y-6">
             <!-- Email -->
-            <div class="flex items-start gap-4">
+            <div class="contact-info-item flex items-start gap-4">
               <div class="flex-shrink-0 w-10 h-10 bg-[var(--primary)] rounded-full flex items-center justify-center text-white">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -97,7 +114,7 @@ const submitForm = async () => {
             </div>
 
             <!-- Discord -->
-            <div class="flex items-start gap-4">
+            <div class="contact-info-item flex items-start gap-4">
               <div class="flex-shrink-0 w-10 h-10 bg-[var(--primary)] rounded-full flex items-center justify-center text-white">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M13.545 2.907a13.227 13.227 0 00-3.573-1.04 9.756 9.756 0 00-.464 1.949 12.518 12.518 0 013.785.57 1.125 1.125 0 00.1 1.967 19.815 19.815 0 01-3.015.9 11.02 11.02 0 01-1.685-2.373 11.078 11.078 0 0110.25 6.289 11.301 11.301 0 01.766 5.288c0 2.52-1.393 4.721-3.285 6.022a10.066 10.066 0 01-3.107 1.271 9.897 9.897 0 00-.465-1.992 12.88 12.88 0 003.787-.771 9.01 9.01 0 002.412-.962 11.05 11.05 0 01-1.782-5.357 11.079 11.079 0 01.464-3.589 10.015 10.015 0 011.685 2.373z"/>
@@ -110,7 +127,7 @@ const submitForm = async () => {
             </div>
 
             <!-- Response Time -->
-            <div class="flex items-start gap-4">
+            <div class="contact-info-item flex items-start gap-4">
               <div class="flex-shrink-0 w-10 h-10 bg-[var(--primary)] rounded-full flex items-center justify-center text-white">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -127,7 +144,7 @@ const submitForm = async () => {
         <!-- Contact Form -->
         <form @submit.prevent="submitForm" class="md:col-span-2 space-y-5">
           <!-- Name -->
-          <div>
+          <div class="contact-form-group">
             <label for="name" class="block text-sm font-medium text-gray-900 mb-2">
               Nom complet *
             </label>
@@ -142,7 +159,7 @@ const submitForm = async () => {
           </div>
 
           <!-- Email -->
-          <div>
+          <div class="contact-form-group">
             <label for="email" class="block text-sm font-medium text-gray-900 mb-2">
               Adresse email *
             </label>
@@ -157,7 +174,7 @@ const submitForm = async () => {
           </div>
 
           <!-- Subject -->
-          <div>
+          <div class="contact-form-group">
             <label for="subject" class="block text-sm font-medium text-gray-900 mb-2">
               Sujet
             </label>
@@ -176,7 +193,7 @@ const submitForm = async () => {
           </div>
 
           <!-- Message -->
-          <div>
+          <div class="contact-form-group">
             <label for="message" class="block text-sm font-medium text-gray-900 mb-2">
               Message *
             </label>
@@ -203,7 +220,7 @@ const submitForm = async () => {
           </div>
 
           <!-- Submit Button -->
-          <div class="flex gap-4">
+          <div class="contact-form-submit flex gap-4">
             <button
               type="submit"
               :disabled="isSubmitting"
