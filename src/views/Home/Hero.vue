@@ -145,9 +145,3 @@ onMounted(async () => {
     </section>
 
 </template>
-
-<style scoped>
-.bg {
-  background: linear-gradient(to bottom, #9dc1e6, #ecdfd1);
-}
-</style>

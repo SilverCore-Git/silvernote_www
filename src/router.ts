@@ -6,7 +6,8 @@ import Contact from './views/Contact/Contact.vue';
 import NotFound from './views/NotFound/NotFound.vue';
 import Http from './views/redirect/http.vue';
 import CollaborationDetail from './views/Collaboration/CollaborationDetail.vue';
-import Colab from './views/Home/Collaboration.vue';
+import Features from './views/Features/Features.vue';
+import FeaturesView from './views/Features/FeaturesView.vue';
 
 
 const routes = [
@@ -29,15 +30,15 @@ const routes = [
     meta: { title: 'Contactez-nous - Silvernote' }
   },
   { 
-    path: '/features', 
+    path: '/fonctionnalites', 
     name: 'FeaturesList', 
-    component: Colab,
+    component: Features,
     meta: { title: 'Fonctionnalité - Silvernote' }
   },
   { 
-    path: '/collaboration/:slug', 
-    name: 'CollaborationDetail', 
-    component: CollaborationDetail,
+    path: '/fonctionnalite/:slug', 
+    name: 'fonctionnalitesView', 
+    component: FeaturesView,
     meta: { title: 'Fonctionnalité - Silvernote' }
   },
   { 

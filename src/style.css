@@ -17,6 +17,10 @@
 
 }
 
+.bg {
+  background: linear-gradient(to bottom, #9dc1e6, #ecdfd1);
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;

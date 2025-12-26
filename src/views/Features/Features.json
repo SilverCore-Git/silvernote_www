@@ -1,0 +1,98 @@
+[
+  {
+    "slug": "real-time-editing",
+    "icon": "bi-people-fill",
+    "title": "Édition en temps réel",
+    "description": "Collaborez simultanément avec d'autres utilisateurs sur les mêmes notes.",
+    "details": "Travaillez ensemble en temps réel avec des mises à jour instantanées et une synchronisation fluide.",
+    "features": [
+      "Modifications visibles instantanément",
+      "Curseurs en direct pour chaque collaborateur",
+      "Commentaires intégrés"
+    ]
+  },
+  {
+    "slug": "cloud-sync",
+    "icon": "bi-cloud-arrow-up-fill",
+    "title": "Synchronisation cloud",
+    "description": "Accédez à vos notes depuis n’importe quel appareil.",
+    "details": "Toutes vos notes sont automatiquement synchronisées sur le cloud en temps réel.",
+    "features": [
+      "Accès multi-appareils",
+      "Synchronisation instantanée",
+      "Aucune sauvegarde manuelle"
+    ]
+  },
+  {
+    "slug": "markdown-editor",
+    "icon": "bi-markdown-fill",
+    "title": "Éditeur Markdown avancé",
+    "description": "Écrivez rapidement avec un éditeur puissant et intuitif.",
+    "details": "Profitez d’un éditeur moderne inspiré de Notion avec support Markdown et blocs dynamiques.",
+    "features": [
+      "Support Markdown complet",
+      "Blocs de contenu flexibles",
+      "Raccourcis clavier intelligents"
+    ]
+  },
+  {
+    "slug": "organization-tags",
+    "icon": "bi-tags-fill",
+    "title": "Organisation intelligente",
+    "description": "Classez et retrouvez vos notes facilement.",
+    "details": "Organisez vos notes avec des tags, des épingles et une recherche performante.",
+    "features": [
+      "Tags personnalisés",
+      "Notes épinglées",
+      "Recherche rapide et précise"
+    ]
+  },
+  {
+    "slug": "sharing-permissions",
+    "icon": "bi-shield-lock-fill",
+    "title": "Partage avec permissions",
+    "description": "Partagez vos notes en toute sécurité.",
+    "details": "Contrôlez précisément qui peut voir ou modifier vos notes partagées.",
+    "features": [
+      "Accès en lecture seule ou édition",
+      "Gestion des collaborateurs",
+      "Partage sécurisé par lien"
+    ]
+  },
+  {
+    "slug": "offline-access",
+    "icon": "bi-wifi-off",
+    "title": "Accès hors ligne",
+    "description": "Continuez à travailler même sans connexion Internet.",
+    "details": "Vos notes restent accessibles et se synchronisent automatiquement dès le retour en ligne.",
+    "features": [
+      "Consultation hors ligne",
+      "Édition sans connexion",
+      "Synchronisation automatique"
+    ]
+  },
+  {
+    "slug": "security-privacy",
+    "icon": "bi-lock-fill",
+    "title": "Sécurité et confidentialité",
+    "description": "Vos données sont protégées en permanence.",
+    "details": "SilverNote applique des standards élevés de sécurité pour garantir la confidentialité de vos notes.",
+    "features": [
+      "Chiffrement des données",
+      "Connexion sécurisée",
+      "Protection des accès"
+    ]
+  },
+  {
+    "slug": "cross-platform",
+    "icon": "bi-laptop-fill",
+    "title": "Multi-plateforme",
+    "description": "Utilisez SilverNote partout.",
+    "details": "Disponible sur web, PC et mobile pour une expérience fluide et unifiée.",
+    "features": [
+      "Application web",
+      "Application desktop",
+      "Application mobile"
+    ]
+  }
+]
