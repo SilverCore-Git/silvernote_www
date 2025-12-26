@@ -34,7 +34,7 @@ function moveRight() {
           <img
             :src="props.mobileImg"
             alt="Mobile preview"
-            class="w-full h-full object-cover object-center"
+            class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
           />
         </div>
       </div>
@@ -44,7 +44,7 @@ function moveRight() {
           <img
             :src="props.webImg"
             alt="Web app preview"
-            class="w-full h-full object-cover object-center"
+            class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-300"
           />
         </div>
       </div>
