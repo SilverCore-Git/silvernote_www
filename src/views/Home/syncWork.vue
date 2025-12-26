@@ -13,8 +13,7 @@
             </h2>
 
             <p class="text-lg text-gray-700">
-                Accédez à vos notes sur n'importe quel appareil et voyez les modifications en direct,
-                même hors ligne.
+                Accédez à vos notes sur n'importe quel appareil et voyez les modifications en direct.
             </p>
         </div>
 

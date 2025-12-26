@@ -21,7 +21,7 @@ const closeMobileMenu = () => {
 
 <template>
     <nav
-        class="fixed top-6 left-0 right-0 mx-auto max-w-[1200px] z-50 px-4 md:px-2 shadow-none
+        class="fixed top-6 left-0 right-0 mx-auto max-w-[1200px] z-50 p-4 md:p-2 shadow-none
             bg-white/10 backdrop-blur-3xl rounded-[100px] flex justify-between items-center transition-all duration-300"
     >
         <div class="flex items-center gap-2 ml-2">
@@ -77,7 +77,7 @@ const closeMobileMenu = () => {
         <transition name="fade">
             <div
                 v-if="mobileMenuOpen"
-                class="fixed inset-0 bg-black/20 md:hidden z-40"
+                class="fixed inset-0 md:hidden z-40"
                 @click="closeMobileMenu"
             ></div>
         </transition>

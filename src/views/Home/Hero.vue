@@ -1,12 +1,17 @@
 <script setup lang="ts">
-import { onMounted, nextTick } from "vue";
+import { onMounted, nextTick, ref } from "vue";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SButton } from "@/components";
+import getVersion from "@/utils/getVersion";
+import openApp from "@/utils/openApp";
 
+const version = ref<string>('');
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(async () => {
+
+    version.value = await getVersion;
 
     await nextTick();
 
@@ -54,7 +59,7 @@ onMounted(async () => {
         >
             <!-- Badge -->
             <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/20 rounded-full backdrop-blur-md">
-                <span class="text-sm font-medium text-[#1A1615]">✨ Nouvelle version bientôt</span>
+                <span class="text-sm font-medium text-[#1A1615]">✨ Version {{ version }}</span>
             </div>
 
             <h1 class="max-w-4xl text-4xl md:text-6xl lg:text-7xl" style="line-height: 110%;">
@@ -68,7 +73,7 @@ onMounted(async () => {
             </p>
 
             <!-- Stats -->
-            <div class="grid grid-cols-3 gap-4 md:gap-8 my-6">
+            <!-- <div class="grid grid-cols-3 gap-4 md:gap-8 my-6">
                 <div class="text-center">
                     <p class="text-2xl md:text-3xl font-bold text-(--primary)">10K+</p>
                     <p class="text-sm md:text-base text-gray-600">Utilisateurs actifs</p>
@@ -81,12 +86,12 @@ onMounted(async () => {
                     <p class="text-2xl md:text-3xl font-bold text-(--primary)">99.9%</p>
                     <p class="text-sm md:text-base text-gray-600">Disponibilité</p>
                 </div>
-            </div>
+            </div> -->
 
             <div class="flex flex-col sm:flex-row justify-center items-center my-8 gap-4">
                 <SButton
                     content="Essayer silvernote"
-                    href="/app"
+                    :href="'/redirect/'+openApp({ utm_medium: 'hero', type: 'href' })"
                 />
                 <SButton
                     content="Voir les fonctionnalités"
@@ -95,7 +100,7 @@ onMounted(async () => {
                 />
             </div>
 
-            <div class="z-10 perspective-[2000px] w-full max-w-2xl">
+            <div class="z-10 perspective-[2000px] w-full max-w-4xl">
                 <img 
                     class="rounded-2xl hero-img z-10 w-full shadow-2xl"
                     src="/assets/img/silvernote_desktop_screen.png"
