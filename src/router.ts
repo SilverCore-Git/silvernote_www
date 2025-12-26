@@ -15,7 +15,7 @@ const routes = [
     path: '/', 
     name: 'Home', 
     component: Home,
-    meta: { title: 'Accueil - Silvernote' }
+    meta: { title: 'Vos notes accessibles partout et simplement - Silvernote' }
   },
   { 
     path: '/download', 

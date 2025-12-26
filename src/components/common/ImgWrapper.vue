@@ -1,7 +1,7 @@
 <template>
     <div 
         class="
-                relative w-full h-[500px] md:h-[60vw] max-h-[700px] 
+                relative w-full h-[600px] 
                 rounded-3xl overflow-hidden
             "
         style="background: linear-gradient(to bottom, #9dc1e6, #ecdfd1);"
