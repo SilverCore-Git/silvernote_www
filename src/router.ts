@@ -5,9 +5,9 @@ import Download from './views/Download/Download.vue';
 import Contact from './views/Contact/Contact.vue';
 import NotFound from './views/NotFound/NotFound.vue';
 import Http from './views/redirect/http.vue';
-import CollaborationDetail from './views/Collaboration/CollaborationDetail.vue';
 import Features from './views/Features/Features.vue';
 import FeaturesView from './views/Features/FeaturesView.vue';
+import { PricingSection } from './components';
 
 
 const routes = [
@@ -30,13 +30,19 @@ const routes = [
     meta: { title: 'Contactez-nous - Silvernote' }
   },
   { 
-    path: '/fonctionnalites', 
+    path: '/pricing', 
+    name: 'Pricing', 
+    component: PricingSection,
+    meta: { title: 'Tarifs - Silvernote' }
+  },
+  { 
+    path: '/features', 
     name: 'FeaturesList', 
     component: Features,
     meta: { title: 'Fonctionnalité - Silvernote' }
   },
   { 
-    path: '/fonctionnalite/:slug', 
+    path: '/features/:slug', 
     name: 'fonctionnalitesView', 
     component: FeaturesView,
     meta: { title: 'Fonctionnalité - Silvernote' }
