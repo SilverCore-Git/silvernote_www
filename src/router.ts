@@ -4,6 +4,7 @@ import App from './views/redirect/app.vue';
 import Download from './views/Download/Download.vue';
 import Contact from './views/Contact/Contact.vue';
 import NotFound from './views/NotFound/NotFound.vue';
+import Http from './views/redirect/http.vue';
 
 
 const routes = [
@@ -32,6 +33,12 @@ const routes = [
     meta: { title: 'redirection - Silvernote' }
   },
   { 
+    path: '/redirect/:path(.*)', 
+    name: 'http-app', 
+    component: Http,
+    meta: { title: 'redirection - Silvernote' }
+  },
+  { 
     path: '/:pathMatch(.*)*', 
     name: 'NotFound', 
     component: NotFound,
@@ -40,10 +47,16 @@ const routes = [
 ]
 
 
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
+  scrollBehavior(to, _from, _savedPosition) {
+    if (to.hash) {
+      const el = document.querySelector(to.hash);
+      if (el) return { top: (el as HTMLElement).offsetTop, behavior: 'smooth' };
+    }
+    return { top: 0 };
+  }
 });
 
 router.beforeEach((to: any, _from: any, next: any) => {
