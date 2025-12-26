@@ -5,6 +5,8 @@ import Download from './views/Download/Download.vue';
 import Contact from './views/Contact/Contact.vue';
 import NotFound from './views/NotFound/NotFound.vue';
 import Http from './views/redirect/http.vue';
+import CollaborationDetail from './views/Collaboration/CollaborationDetail.vue';
+import Colab from './views/Home/Collaboration.vue';
 
 
 const routes = [
@@ -25,6 +27,18 @@ const routes = [
     name: 'Contact', 
     component: Contact,
     meta: { title: 'Contactez-nous - Silvernote' }
+  },
+  { 
+    path: '/features', 
+    name: 'FeaturesList', 
+    component: Colab,
+    meta: { title: 'Fonctionnalité - Silvernote' }
+  },
+  { 
+    path: '/collaboration/:slug', 
+    name: 'CollaborationDetail', 
+    component: CollaborationDetail,
+    meta: { title: 'Fonctionnalité - Silvernote' }
   },
   { 
     path: '/app', 

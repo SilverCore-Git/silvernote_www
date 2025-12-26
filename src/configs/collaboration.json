@@ -1,0 +1,83 @@
+{
+  "section": {
+    "subtitle": "la productivité",
+    "title": "Collaborer avec des personnes",
+    "description": "Travaillez ensemble en temps réel avec vos collègues et amis"
+  },
+  "cards": [
+    {
+      "id": 1,
+      "title": "Synchronisation Cloud",
+      "description": "Vos notes sont automatiquement synchronisées et sauvegardées en toute sécurité dans le cloud. Accédez-y de n'importe quel appareil, n'importe quand.",
+      "icon": {
+        "type": "edit",
+        "color": "blue"
+      },
+      "slug": "cloud-sync",
+      "fullDescription": "La synchronisation cloud de Silvernote garantit que vos notes sont toujours à jour et accessibles de partout. Grâce à notre infrastructure cloud robuste, vos données sont sauvegardées en temps réel et protégées avec le chiffrement de bout en bout.",
+      "features": [
+        "Synchronisation en temps réel sur tous les appareils",
+        "Chiffrement end-to-end pour la sécurité",
+        "Sauvegarde automatique toutes les 30 secondes",
+        "Récupération de versions précédentes",
+        "Espace de stockage illimité avec Premium",
+        "Pas d'interruption de service avec 99.9% de disponibilité"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Collaborer en temps réel",
+      "description": "Travaillez facilement à plusieurs dans vos notes partagées. Voyez les modifications en direct et collaborez sans friction.",
+      "icon": {
+        "type": "users",
+        "color": "orange"
+      },
+      "slug": "real-time-collab",
+      "fullDescription": "La collaboration en temps réel de Silvernote permet à plusieurs utilisateurs de travailler simultanément sur les mêmes notes. Chaque modification est immédiatement visible à tous les collaborateurs, créant une expérience de travail fluide et productive.",
+      "features": [
+        "Curseurs en direct pour voir qui tape où",
+        "Historique détaillé de chaque modification",
+        "Mentions et notifications pour les collaborateurs",
+        "Commentaires intégrés et discussions",
+        "Contrôle d'accès granulaire par utilisateur",
+        "Mode lecture seule pour les consultants"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Partage instantané",
+      "description": "Partagez vos notes avec un simple lien sécurisé. Contrôlez les permissions de chaque collaborateur en quelques clics.",
+      "icon": {
+        "type": "share",
+        "color": "green"
+      },
+      "slug": "instant-sharing",
+      "fullDescription": "Le partage instantané rend la collaboration simple et sécurisée. Générez des liens de partage avec des permissions personnalisées et expirez-les automatiquement pour maintenir la sécurité de vos notes.",
+      "features": [
+        "Liens de partage avec expiration",
+        "Permissions par utilisateur (lecture, écriture, gestion)",
+        "Partage par email ou lien direct",
+        "Suivi de qui accède à vos notes",
+        "Partage public ou privé",
+        "Révocation des accès en un clic"
+      ]
+    }
+  ],
+  "quickFeatures": [
+    {
+      "icon": "check",
+      "title": "Partage instantané",
+      "description": "Partagez vos notes avec un simple lien"
+    },
+    {
+      "icon": "check",
+      "title": "Permissions granulaires",
+      "description": "Contrôlez qui peut voir et modifier"
+    },
+    {
+      "icon": "check",
+      "title": "Historique complet",
+      "description": "Revoyez chaque modification"
+    }
+  ]
+}

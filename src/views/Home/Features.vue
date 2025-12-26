@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { FeaturesSection } from '@/components';
-import Features_config from './Features.json';
+import Features_config from '@/configs/Features.json';
 
 </script>
 

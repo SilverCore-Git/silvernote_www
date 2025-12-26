@@ -6,7 +6,6 @@ const navbar_config = [
   { name: "Accueil", href: "/" },
   { name: "Fonctionnalités", href: "#features" },
   { name: "Collaboratif", href: "#collab" },
-  { name: "Blog", href: "#blog" },
   { name: "Contact", href: "/contact" },
 ];
 
