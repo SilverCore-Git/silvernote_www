@@ -5,8 +5,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SButton } from "@/components";
 import getVersion from "@/utils/getVersion";
 import openApp from "@/utils/openApp";
+import SnoteStatus from "../../components/common/SnoteStatus.vue";
 
 const version = ref<string>('');
+const showSStatus = ref<boolean>(false);
+
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(async () => {
@@ -103,12 +106,24 @@ onMounted(async () => {
         class="flex justify-center items-center flex-col pt-36 pb-20 bg shadow z-20 px-4"
     >
         <div 
-            class="max-w-5xl text-center flex justify-center items-center flex-col gap-8"
+            class="max-w-5xl text-center flex justify-center items-center flex-col gap-8 relative"
         >
             <!-- Badge -->
-            <div class="hero-badge inline-flex items-center gap-2 px-4 py-2 bg-white/20 rounded-full backdrop-blur-md">
+            <div 
+                class="
+                    hero-badge inline-flex items-center gap-2
+                    px-4 py-2 bg-white/20 rounded-full 
+                    backdrop-blur-md cursor-pointer
+                "
+                @click="showSStatus = !showSStatus"
+            >
                 <span class="text-sm font-medium text-[#1A1615]">✨ Version {{ version }}</span>
             </div>
+
+            <SnoteStatus
+                v-if="showSStatus"
+                class="absolute top-16"
+            />
 
             <h1 class="hero-title max-w-4xl text-4xl md:text-6xl lg:text-7xl" style="line-height: 110%;">
                 Vos notes <span class="text-[var(--primary)]">accessibles</span> <span class="text-[var(--primary)]">partout</span> et simplement
@@ -122,7 +137,7 @@ onMounted(async () => {
 
             <div class="hero-buttons flex flex-col sm:flex-row justify-center items-center my-8 gap-4">
                 <SButton
-                    content="Essayer silvernote"
+                    content="Ouvrir silvernote"
                     :href="'/redirect/'+openApp({ utm_medium: 'hero', type: 'href' })"
                 />
                 <SButton
