@@ -49,7 +49,7 @@
             <!-- Back button -->
             <div class="mt-12 text-center">
                 <router-link
-                    to="/fonctionnalites"
+                    to="/features"
                     class="inline-flex items-center gap-2 text-[var(--primary)] font-semibold hover:underline"
                 >
                     <i class="bi bi-arrow-left"></i>

@@ -19,7 +19,7 @@
                 <router-link
                     v-for="(card, index) in config"
                     :key="index"
-                    :to="`/fonctionnalite/${card.slug}`"
+                    :to="`/features/${card.slug}`"
                     class="
                             collab-card group p-6 md:p-8 rounded-2xl shadow-lg 
                             hover:shadow-xl bg-white transition-all duration-300 
