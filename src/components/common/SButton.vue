@@ -1,6 +1,5 @@
 <template>
-  <button
-    @click="open(href)"
+  <RouterLink :to="href"><button
     :class="nobg ? 'bg-white/10 hover:bg-white/20 text-black border-2 border-white/30' : 'bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white shadow-lg hover:shadow-xl'"
     class="
       font-semibold rounded-full text-lg
@@ -26,7 +25,7 @@
         >{{ content }}</span>
       </div>
     </div>
-  </button>
+  </button></RouterLink>
 </template>
 
 <script setup lang="ts">
@@ -43,21 +42,4 @@ defineProps<{
 const router = useRouter();
 const hovered = ref<boolean>(false);
 
-const open = (href: string) => {
-  if (href === 'none') return;
-  if (href.startsWith('#'))
-  {
-    const el = document.getElementById(href.replace('#', ''));
-    if (!el) return;
-    el.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }
-  else
-  {
-    if ([ '/', '/download', '/app', '/contact' ].includes(href)) return router.push(href);
-    window.location.href = href;
-  }
-}
 </script>
