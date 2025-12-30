@@ -71,16 +71,18 @@ onMounted(async () => {
 
 <template>
     <nav
-        class="navbar fixed top-6 left-0 right-0 mx-auto max-w-[1200px] z-50 p-4 md:p-2 shadow-none
-            bg-white/10 backdrop-blur-3xl rounded-[100px] flex justify-between items-center transition-all duration-300"
+        class="
+            fixed top-6 inset-x-0 lg:mx-auto max-w-[1200px] z-50 px-4 py-4 mx-8 md:py-2  shadow-none rounded-[100px]
+            bg-white/20 backdrop-blur-3xl flex justify-between items-center transition-all duration-300 navbar
+        "
     >
         <div class="navbar-logo flex items-center gap-2 ml-2">
             <img
                 src="/assets/logo/snote/favicon.svg"
                 alt="Silvernote Logo"
-                class="w-6"
+                class="w-10"
             />
-            <span class="text-[16px] md:text-[20px] font-semibold text-[#1A1615]">Silvernote</span>
+            <span class="text-2xl font-semibold text-[#1A1615]">Silvernote</span>
         </div>
 
         <!-- Menu Desktop -->
