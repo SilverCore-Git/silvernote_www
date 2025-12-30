@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from './views/Home/Home.vue';
-import App from './views/redirect/app.vue';
+import App from './views/_redirect/app.vue';
 import Download from './views/Download/Download.vue';
 import Contact from './views/Contact/Contact.vue';
-import NotFound from './views/NotFound/NotFound.vue';
-import Http from './views/redirect/http.vue';
+import NotFound from './views/_NotFound/NotFound.vue';
+import Http from './views/_redirect/http.vue';
 import Features from './views/Features/Features.vue';
 import FeaturesView from './views/Features/FeaturesView.vue';
 import { PricingSection } from './components';
