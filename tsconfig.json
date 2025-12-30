@@ -1,13 +1,19 @@
 {
-  "files": [],
+  "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     },
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
   },
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+  "include": [
+    ".nuxt/nuxt.d.ts",
+    "src/**/*.ts",
+    "src/**/*.vue",
+    "nuxt.config.ts"
   ]
 }
