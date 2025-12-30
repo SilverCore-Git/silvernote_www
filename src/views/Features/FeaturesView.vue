@@ -9,7 +9,7 @@
                 <div class="flex justify-center mb-6">
                     <i
                         v-if="feature"
-                        class="bi text-7xl text-[var(--primary)]"
+                        class="bi text-7xl text-(--primary)"
                         :class="feature.icon"
                     />
                 </div>
@@ -38,7 +38,7 @@
                         :key="index"
                         class="flex items-start gap-3 feature-item"
                     >
-                        <i class="bi bi-check-circle-fill text-[var(--primary)] mt-1"></i>
+                        <i class="bi bi-check-circle-fill text-(--primary) mt-1"></i>
                         <span class="text-gray-800">
                             {{ item }}
                         </span>
@@ -50,10 +50,13 @@
             <div class="mt-12 text-center">
                 <router-link
                     to="/features"
-                    class="inline-flex items-center gap-2 text-[var(--primary)] font-semibold hover:underline"
                 >
-                    <i class="bi bi-arrow-left"></i>
-                    Retour aux fonctionnalités
+                    <p
+                        class="inline-flex items-center gap-2 text-(--primary) font-semibold text-lg hover:underline"
+                    >    
+                        <i class="bi bi-arrow-left"></i>
+                        Retour aux fonctionnalités
+                    </p>
                 </router-link>
             </div>
 

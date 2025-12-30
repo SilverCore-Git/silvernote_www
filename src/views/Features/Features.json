@@ -8,7 +8,7 @@
     "features": [
       "Modifications visibles instantanément",
       "Curseurs en direct pour chaque collaborateur",
-      "Commentaires intégrés"
+      "Gestion des permissions"
     ]
   },
   {
@@ -16,7 +16,7 @@
     "icon": "bi-cloud-arrow-up-fill",
     "title": "Synchronisation cloud",
     "description": "Accédez à vos notes depuis n’importe quel appareil.",
-    "details": "Toutes vos notes sont automatiquement synchronisées sur le cloud en temps réel.",
+    "details": "Toutes vos notes sont automatiquement synchronisées sur le cloud en temps réel pour une continuité parfaite.",
     "features": [
       "Accès multi-appareils",
       "Synchronisation instantanée",
@@ -28,11 +28,12 @@
     "icon": "bi-markdown-fill",
     "title": "Éditeur Markdown avancé",
     "description": "Écrivez rapidement avec un éditeur puissant et intuitif.",
-    "details": "Profitez d’un éditeur moderne inspiré de Notion avec support Markdown et blocs dynamiques.",
+    "details": "Profitez d’un éditeur moderne avec support Markdown et blocs dynamiques.",
     "features": [
       "Support Markdown complet",
       "Blocs de contenu flexibles",
-      "Raccourcis clavier intelligents"
+      "Raccourcis clavier intelligents",
+      "Mise en forme Rich Text intégrée"
     ]
   },
   {
@@ -44,7 +45,8 @@
     "features": [
       "Tags personnalisés",
       "Notes épinglées",
-      "Recherche rapide et précise"
+      "Recherche rapide et précise",
+      "Catégorisation des notes partagées"
     ]
   },
   {
@@ -52,47 +54,50 @@
     "icon": "bi-shield-lock-fill",
     "title": "Partage avec permissions",
     "description": "Partagez vos notes en toute sécurité.",
-    "details": "Contrôlez précisément qui peut voir ou modifier vos notes partagées.",
+    "details": "Personnalisez votre partage pour garantir la confidentialité et la sécurité de vos notes.",
     "features": [
       "Accès en lecture seule ou édition",
-      "Gestion des collaborateurs",
-      "Partage sécurisé par lien"
-    ]
-  },
-  {
-    "slug": "offline-access",
-    "icon": "bi-wifi-off",
-    "title": "Accès hors ligne",
-    "description": "Continuez à travailler même sans connexion Internet.",
-    "details": "Vos notes restent accessibles et se synchronisent automatiquement dès le retour en ligne.",
-    "features": [
-      "Consultation hors ligne",
-      "Édition sans connexion",
-      "Synchronisation automatique"
-    ]
-  },
-  {
-    "slug": "security-privacy",
-    "icon": "bi-lock-fill",
-    "title": "Sécurité et confidentialité",
-    "description": "Vos données sont protégées en permanence.",
-    "details": "SilverNote applique des standards élevés de sécurité pour garantir la confidentialité de vos notes.",
-    "features": [
-      "Chiffrement des données",
-      "Connexion sécurisée",
-      "Protection des accès"
+      "Mot de passe pour le partage",
+      "Partage sécurisé par lien",
+      "Expiration des liens de partage personnalisable"
     ]
   },
   {
     "slug": "cross-platform",
     "icon": "bi-laptop-fill",
     "title": "Multi-plateforme",
-    "description": "Utilisez SilverNote partout.",
+    "description": "Utilisez Silvernote partout.",
     "details": "Disponible sur web, PC et mobile pour une expérience fluide et unifiée.",
     "features": [
       "Application web",
-      "Application desktop",
-      "Application mobile"
+      "Application desktop (Windows, macOS, Linux)",
+      "Application mobile (iOS et Android)",
+      "Synchronisation complète entre appareils"
+    ]
+  },
+  {
+    "slug": "export-notes",
+    "icon": "bi-file-earmark-arrow-down-fill",
+    "title": "Export des notes",
+    "description": "Exportez vos notes dans différents formats pour les sauvegarder ou les partager.",
+    "details": "Silvernote permet d’exporter vos notes en SNOTE, HTML ou PDF pour une utilisation flexible.",
+    "features": [
+      "Export au format SNOTE, HTML et PDF",
+      "Conservation de la mise en forme",
+      "Export rapide et simple"
+    ]
+  },
+  {
+    "slug": "silveria",
+    "icon": "bi-robot",
+    "title": "SilverIA",
+    "description": "Votre assistant intelligent intégré pour améliorer vos notes.",
+    "details": "SilverIA Agent vous aide à rédiger, reformuler, résumer ou enrichir vos notes.",
+    "features": [
+      "Rédaction automatique de contenu",
+      "Suggestions d’amélioration et de reformulation",
+      "Résumé instantané des notes",
+      "Assistance contextuelle en temps réel"
     ]
   }
 ]
