@@ -4,8 +4,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [],
   
+  // Source directory
+  srcDir: 'src/',
+  
   // CSS
-  css: ['./src/style.css', 'bootstrap-icons/font/bootstrap-icons.css'],
+  css: ['@/style.css', 'bootstrap-icons/font/bootstrap-icons.css'],
   
   // Build configuration
   build: {
@@ -51,12 +54,5 @@ export default defineNuxtConfig({
     }
   },
 
-  // Route rules for pre-rendering
-  routeRules: {
-    '/': { prerender: true },
-    '/download': { prerender: true },
-    '/contact': { prerender: true },
-    '/pricing': { prerender: true },
-    '/features': { prerender: true }
-  }
+
 })

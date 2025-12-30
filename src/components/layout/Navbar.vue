@@ -78,7 +78,7 @@ onMounted(async () => {
     >
         <div class="navbar-logo flex items-center gap-2 ml-2">
             <img
-                src="/assets/logo/snote/favicon.svg"
+                src="../../assets/logo/snote/favicon.svg"
                 alt="Silvernote Logo"
                 class="w-10"
             />

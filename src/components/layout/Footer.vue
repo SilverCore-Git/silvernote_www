@@ -9,7 +9,7 @@
                 <div class="footer-brand md:col-span-1 flex flex-col gap-4 max-w-lg">
                     <a href="./" class="flex items-center gap-2">
                         <img 
-                            src="/assets/logo/snote/favicon.svg"
+                            src="../../assets/logo/snote/favicon.svg"
                             alt="Silvernote Logo"
                             class="w-8 h-8"
                         />
