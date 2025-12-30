@@ -147,7 +147,7 @@ onMounted(async () => {
             </h1>
 
             <p class="hero-description mb-4 text-lg md:text-xl text-gray-700 max-w-3xl">
-                SilverNote est l'application de prise de notes simple et intuitive conçue pour vous,
+                Silvernote est l'application de prise de notes simple et intuitive conçue pour vous,
                 disponible sur mobile, PC et en tant qu'application web. Synchronisation en temps réel,
                 collaboration fluide et sécurité garantie.
             </p>

@@ -41,7 +41,7 @@ onMounted(async () => {
             </h2>
 
             <p class="usesnote-description text-lg md:text-xl text-gray-700 max-w-2xl">
-                Essaye Silvenote gratuitement dès maintenant. Aucune carte bancaire requise.
+                Essaye Silvenote gratuitement dès maintenant.
             </p>
 
             <div class="usesnote-buttons flex flex-col sm:flex-row gap-4 justify-center w-full">
@@ -51,17 +51,17 @@ onMounted(async () => {
                         :href="'/redirect/'+openApp({ utm_medium: 'call-to-action', type: 'href' })"
                     />
                 </div>
-                <div>
+                <!-- <div>
                     <SButton
                         content="Voir les tarifs"
                         href="/pricing"
                         :nobg="true"
                     />
-                </div>
+                </div> -->
             </div>
 
             <!-- Trust indicators -->
-            <div class="mt-12 flex flex-col sm:flex-row gap-8 justify-center items-center text-center opacity-75">
+            <!-- <div class="mt-12 flex flex-col sm:flex-row gap-8 justify-center items-center text-center opacity-75">
                 <div class="usesnote-trust-item">
                     <p class="font-bold text-lg text-[var(--primary)]">10K+</p>
                     <p class="text-sm text-gray-600">Utilisateurs satisfaits</p>
@@ -76,7 +76,7 @@ onMounted(async () => {
                     <p class="font-bold text-lg text-[var(--primary)]">24/7</p>
                     <p class="text-sm text-gray-600">Support disponible</p>
                 </div>
-            </div>
+            </div> -->
 
         </div>
 

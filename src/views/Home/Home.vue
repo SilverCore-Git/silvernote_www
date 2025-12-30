@@ -5,11 +5,10 @@
             <Hero />
             <SyncWork />
             <Features />
-            <TestimonialsSection />
-            <PricingSection />
+            <!-- <TestimonialsSection /> -->
+            <!-- <PricingSection /> -->
             <FAQSection />
             <UseSnote />
-            <div class="h-120"></div>
         </div>
     </SmothScrollWrapper>
 
@@ -18,6 +17,6 @@
 <script lang="ts" setup>
 import Hero from './Hero.vue';
 import SyncWork from './syncWork.vue';
-import { SmothScrollWrapper, TestimonialsSection, PricingSection, FAQSection, UseSnote } from '@/components';
+import { SmothScrollWrapper, FAQSection, UseSnote } from '@/components';
 import Features from './Features.vue';
 </script>

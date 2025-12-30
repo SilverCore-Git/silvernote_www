@@ -6,7 +6,7 @@ import gsap from "gsap";
 const navbar_config = [
   { name: "Accueil", href: "/" },
   { name: "Fonctionnalités", href: "/features" },
-  { name: "Tarifs", href: "/pricing" },
+//   { name: "Tarifs", href: "/pricing" },
   { name: "Contact", href: "/contact" },
 ];
 
