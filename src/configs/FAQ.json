@@ -1,0 +1,34 @@
+[
+    {
+        "question": "Silvernote est-il gratuit ?",
+        "answer": "Oui ! Silvernote offre un plan gratuit complet avec toutes les fonctionnalités de base. Des plans premium seront bientôt disponibles pour les utilisateurs souhaitant des fonctionnalités avancées."
+    },
+    {
+        "question": "Puis-je utiliser Silvernote hors ligne ?",
+        "answer": "Actuellement, Silvernote nécessite une connexion internet pour synchroniser vos notes. Nous travaillons activement à une version hors ligne afin que vous puissiez accéder à vos notes même sans connexion."
+    },
+    {
+        "question": "Sur quels appareils puis-je utiliser Silvernote ?",
+        "answer": "Silvernote est accessible partout ! Vous pouvez l'utiliser sur iOS, Android, Windows, macOS, Linux, ainsi que via l'application web. Toutes vos notes sont automatiquement synchronisées entre vos appareils."
+    },
+    {
+        "question": "Comment partager mes notes avec d'autres ?",
+        "answer": "Vous pouvez partager vos notes via un lien sécurisé. Vous pouvez autoriser ou non la modification, définir une date d'expiration pour le partage et voir quels collaborateurs ont accès à chaque note."
+    },
+    {
+        "question": "Puis-je collaborer en temps réel sur une note ?",
+        "answer": "Oui ! Silvernote permet la collaboration en temps réel. Vous pouvez voir instantanément les modifications apportées par vos collaborateurs, comme dans un éditeur de type Notion."
+    },
+    {
+        "question": "Puis-je organiser mes notes avec des tags ?",
+        "answer": "Absolument ! Silvernote permet de créer des tags pour organiser vos notes, les trier et les retrouver facilement."
+    },
+    {
+        "question": "Comment puis-je sauvegarder mes notes ?",
+        "answer": "Toutes vos notes sont automatiquement sauvegardées dans le cloud et synchronisées entre vos appareils. Vous pouvez également exporter vos notes si besoin, dans les formats SNOTE, HTML et même PDF."
+    },
+    {
+        "question": "Puis-je utiliser des éditeurs Markdown ou Rich Text ?",
+        "answer": "Oui ! Silvernote intègre un éditeur avancé, simple d'utilisation, permettant la mise en forme en Markdown et Rich Text pour toutes vos notes."
+    }
+]

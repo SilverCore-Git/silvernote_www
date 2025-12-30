@@ -1,32 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
-
-const faqs = [
-  {
-    question: "SilverNote est-il gratuit ?",
-    answer: "Oui ! SilverNote offre un plan gratuit complet avec toutes les fonctionnalités de base. Des plans premium sont disponibles pour les utilisateurs qui souhaitent des fonctionnalités avancées."
-  },
-  {
-    question: "Mes données sont-elles sécurisées ?",
-    answer: "Absolument. Toutes vos données sont chiffrées de bout en bout et stockées sur des serveurs sécurisés. Nous respectons les normes RGPD et les meilleures pratiques en matière de sécurité."
-  },
-  {
-    question: "Puis-je utiliser SilverNote hors ligne ?",
-    answer: "Oui ! SilverNote fonctionne hors ligne et synchronise automatiquement vos notes une fois la connexion rétablie. Vous ne perdrez jamais vos données."
-  },
-  {
-    question: "Sur quels appareils puis-je utiliser SilverNote ?",
-    answer: "SilverNote est disponible sur iOS, Android, Windows, macOS et en tant qu'application web. Synchronisation complète sur tous les appareils."
-  },
-  {
-    question: "Comment partager mes notes avec d'autres ?",
-    answer: "Vous pouvez partager vos notes avec un lien simple ou inviter des collaborateurs spécifiques. Gérez les permissions pour contrôler qui peut voir, commenter ou modifier."
-  },
-  {
-    question: "Comment puis-je supprimer mon compte ?",
-    answer: "Vous pouvez demander la suppression de votre compte à tout moment depuis les paramètres. Vos données seront complètement supprimées en 30 jours."
-  }
-];
+import faqs from "../../configs/FAQ.json"
+import SButton from "../common/SButton.vue";
 
 const openedIndex = ref<number | null>(null);
 
@@ -95,14 +70,12 @@ const toggleFAQ = (index: number) => {
           Vous ne trouvez pas votre réponse ?
         </h3>
         <p class="text-gray-700 mb-4">
-          Notre équipe de support est disponible 24/7 pour vous aider
+          Notre équipe de support est disponible pour vous aider
         </p>
-        <a
+        <SButton
+          content="Contactez-nous"
           href="/contact"
-          class="inline-block px-6 py-2 bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white font-semibold rounded-full transition-all duration-300"
-        >
-          Contactez-nous
-        </a>
+        />
       </div>
     </div>
   </section>
