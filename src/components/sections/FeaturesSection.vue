@@ -1,6 +1,6 @@
 <template>
 
-    <section class="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12 px-4 md:px-0 min-h-[600px] md:h-[700px] max-w-5xl mx-auto w-full">
+    <section ref="sectionEl" class="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12 px-4 md:px-0 min-h-[600px] md:h-[700px] max-w-5xl mx-auto w-full">
 
         <div 
             class="
@@ -12,10 +12,10 @@
             <ImgWrapper
                 v-if="isPair(imgPos)"
                 :src="prop.img"
-                class="md:w-1/2 w-full"
+                class="md:w-1/2 w-full feature-image"
             />
 
-            <div class="w-full md:w-1/2 flex flex-col gap-6 justify-center">
+            <div class="w-full md:w-1/2 flex flex-col gap-6 justify-center feature-content">
 
                 <div class="flex flex-col gap-4">
                         
@@ -61,7 +61,7 @@
             <ImgWrapper
                 v-if="!isPair(imgPos)"
                 :src="prop.img"
-                class="md:w-1/2 w-full"
+                class="md:w-1/2 w-full feature-image"
             />
             
         </div>
@@ -74,8 +74,11 @@
     
 import { SButton, ImgWrapper } from "@/components";
 import openApp from "../../utils/openApp";
+import { onMounted, ref, nextTick } from 'vue';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-defineProps<{
+const props = defineProps<{
     prop: {
         img: string;
         subject: string;
@@ -96,5 +99,60 @@ defineProps<{
 const isPair = (n: number) => {
   return n % 2 === 0;
 }
+
+gsap.registerPlugin(ScrollTrigger);
+const sectionEl = ref<HTMLElement | null>(null);
+
+onMounted(async () => {
+    await nextTick();
+    const section = sectionEl.value;
+    if (!section) return;
+
+    const image = section.querySelector('.feature-image');
+    const content = section.querySelector('.feature-content');
+    const textElements = content?.querySelectorAll('span, h2, p');
+    const button = content?.querySelector('.w-fit');
+    const features = content?.querySelectorAll('.grid > div');
+    const innerImage = image?.querySelector('.img-gsap');
+
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+            toggleActions: "play none none reverse",
+        }
+    });
+
+    const imageIsLeft = isPair(props.imgPos);
+
+    if (image) {
+        tl.from(image, { xPercent: imageIsLeft ? -50 : 50, opacity: 0, duration: 1, ease: 'power3.out' });
+    }
+
+    if(textElements) {
+        tl.from(textElements, { xPercent: imageIsLeft ? 30 : -30, opacity: 0, duration: 0.8, stagger: 0.2, ease: 'power2.out' }, '-=0.7');
+    }
+    
+    if(button) {
+        tl.from(button, { xPercent: imageIsLeft ? 30 : -30, opacity: 0, duration: 0.8, ease: 'power2.out' }, '-=0.6');
+    }
+
+    if (features) {
+        tl.from(features, { opacity: 0, scale: 0.9, stagger: 0.1, duration: 0.5, ease: 'back.out(1.7)' }, '-=0.5');
+    }
+
+    if(innerImage) {
+        gsap.to(innerImage, {
+            yPercent: -10,
+            ease: "none",
+            scrollTrigger: {
+                trigger: section,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1,
+            }
+        });
+    }
+});
 
 </script>

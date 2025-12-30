@@ -18,7 +18,7 @@
 }
 
 .bg {
-  background: linear-gradient(to bottom, #9dc1e6, #ecdfd1);
+  background: linear-gradient(to bottom, #9dc1e6 0%, #ecdfd1 70%, #fff 100%);
 }
 
 /* Smooth scrolling */

@@ -1,34 +1,39 @@
 <script setup lang="ts">
 
-import { onMounted, nextTick } from 'vue';
+import { onMounted, nextTick, ref } from 'vue';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SButton } from '@/components/common';
 import openApp from '../../utils/openApp';
+
+gsap.registerPlugin(ScrollTrigger);
+const sectionEl = ref<HTMLElement | null>(null);
 
 onMounted(async () => {
   await nextTick();
   
-  // Badge animation
-  gsap.from('.usesnote-badge', { opacity: 0, scale: 0.8, duration: 0.6, ease: 'back.out', delay: 0.2 });
-  
-  // Title animation
-  gsap.from('.usesnote-title', { opacity: 0, y: 30, duration: 0.8, ease: 'power3.out', delay: 0.4 });
-  
-  // Description animation
-  gsap.from('.usesnote-description', { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out', delay: 0.6 });
-  
-  // Buttons animation
-  gsap.from('.usesnote-buttons > div', { opacity: 0, y: 20, duration: 0.6, stagger: 0.1, ease: 'power3.out', delay: 0.8 });
-  
-  // Trust indicators animation
-  gsap.from('.usesnote-trust-item', { opacity: 0, y: 20, duration: 0.5, stagger: 0.1, ease: 'power3.out', delay: 1.2 });
+  const section = sectionEl.value;
+  if (!section) return;
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: section,
+      start: 'top 80%',
+      toggleActions: 'play none none reverse',
+    }
+  });
+
+  tl.from('.usesnote-badge', { opacity: 0, scale: 0.8, duration: 0.6, ease: 'back.out' }, 0.2)
+    .from('.usesnote-title', { opacity: 0, y: 30, duration: 0.8, ease: 'power3.out' }, 0.4)
+    .from('.usesnote-description', { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out' }, 0.6)
+    .from('.usesnote-buttons > div', { opacity: 0, y: 20, duration: 0.6, stagger: 0.1, ease: 'power3.out' }, 0.8);
 });
 
 </script>
 
 <template>
 
-    <section id="calltoaction" class="flex justify-center items-center w-full flex-col py-20 px-4">
+    <section ref="sectionEl" id="calltoaction" class="flex justify-center items-center w-full flex-col py-20 px-4">
 
         <div class="max-w-3xl text-center flex justify-center items-center flex-col gap-8 w-full">
 

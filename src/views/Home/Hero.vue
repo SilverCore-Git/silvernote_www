@@ -113,7 +113,7 @@ onMounted(async () => {
 <template>
 
     <section 
-        class="flex justify-center items-center flex-col pt-36 pb-20 bg shadow z-20 px-4"
+        class="flex justify-center items-center flex-col pt-36 pb-40 bg shadow z-20 px-4"
     >
         <div 
             class="max-w-5xl text-center flex justify-center items-center flex-col gap-8 relative"

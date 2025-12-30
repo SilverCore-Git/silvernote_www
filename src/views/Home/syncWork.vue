@@ -42,48 +42,47 @@ onMounted(async () => {
   const section = document.querySelector('.sync-section');
   if (!section) return;
 
-  // Badge avec scale + fade
-  gsap.from(section.querySelector('.sync-badge'), {
-    opacity: 0,
-    scale: 0.8,
-    y: -15,
-    duration: 0.6,
-    ease: 'back.out',
-    delay: 0.2,
-  });
-
-  // Titre avec fade + slide
-  gsap.from(section.querySelector('.sync-title'), {
-    opacity: 0,
-    y: 30,
-    duration: 0.8,
-    ease: 'power3.out',
-    delay: 0.4,
-  });
-
-  // Description avec fade
-  gsap.from(section.querySelector('.sync-description'), {
-    opacity: 0,
-    y: 20,
-    duration: 0.7,
-    ease: 'power2.out',
-    delay: 0.6,
-  });
-
-  // Image/Viewer avec scale + rotation
-  gsap.from(section.querySelector('.sync-viewer'), {
-    opacity: 0,
-    scale: 0.9,
-    rotation: -2,
-    duration: 0.8,
-    ease: 'back.out',
-    delay: 0.8,
+  const tl = gsap.timeline({
     scrollTrigger: {
       trigger: section,
       start: 'top 70%',
       toggleActions: 'play none none reverse',
     },
   });
+
+  // Badge avec scale + fade
+  tl.from(section.querySelector('.sync-badge'), {
+    opacity: 0,
+    scale: 0.8,
+    y: -15,
+    duration: 0.6,
+    ease: 'back.out',
+  }, 0.2);
+
+  // Titre avec fade + slide
+  tl.from(section.querySelector('.sync-title'), {
+    opacity: 0,
+    y: 30,
+    duration: 0.8,
+    ease: 'power3.out',
+  }, 0.4);
+
+  // Description avec fade
+  tl.from(section.querySelector('.sync-description'), {
+    opacity: 0,
+    y: 20,
+    duration: 0.7,
+    ease: 'power2.out',
+  }, 0.6);
+
+  // Image/Viewer avec scale + rotation
+  tl.from(section.querySelector('.sync-viewer'), {
+    opacity: 0,
+    scale: 0.9,
+    rotation: -2,
+    duration: 0.8,
+    ease: 'back.out',
+  }, 0.8);
 });
 
 </script>
