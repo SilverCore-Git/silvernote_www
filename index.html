@@ -1,16 +1,107 @@
 <!doctype html>
 <html lang="fr">
   <head>
+    <!-- ========================= -->
+    <!-- Basics -->
+    <!-- ========================= -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-     
+    <title>Silvernote – Prenez, organisez et synchronisez vos notes</title>
+
+    <!-- ========================= -->
+    <!-- SEO -->
+    <!-- ========================= -->
+    <meta
+      name="description"
+      content="Silvernote est une application de prise de notes moderne, rapide et sécurisée. Organisez vos idées, dossiers et tags, sur tous vos appareils."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="SilverCore" />
+    <meta name="publisher" content="SilverCore" />
+    <meta name="language" content="fr" />
+    <meta name="rating" content="general" />
+
+    <link rel="canonical" href="https://www.silvernote.fr/" />
+
+    <!-- ========================= -->
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <!-- ========================= -->
+    <meta property="og:title" content="Silvernote – Application de prise de notes" />
+    <meta
+      property="og:description"
+      content="Prenez, organisez et retrouvez vos notes simplement avec Silvernote."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Silvernote" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:url" content="https://www.silvernote.fr/" />
+    <meta property="og:image" content="https://www.silvernote.fr/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- ========================= -->
+    <!-- Twitter Card -->
+    <!-- ========================= -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Silvernote – Application de prise de notes" />
+    <meta
+      name="twitter:description"
+      content="Une application simple et puissante pour gérer toutes vos notes."
+    />
+    <meta name="twitter:image" content="https://www.silvernote.fr/og-image.png" />
+
+    <!-- ========================= -->
+    <!-- Fonts -->
+    <!-- ========================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ========================= -->
+    <!-- Icons -->
+    <!-- ========================= -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- ========================= -->
+    <!-- Performance -->
+    <!-- ========================= -->
+    <link rel="preload" as="script" href="/src/main.ts" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Silvernote",
+        "operatingSystem": "Web, Windows, macOS, Linux, Android, iOS",
+        "applicationCategory": "ProductivityApplication",
+        "description": "Silvernote est une application de prise de notes moderne, rapide et sécurisée pour organiser vos idées, dossiers et tags sur tous vos appareils.",
+        "url": "https://www.silvernote.fr/",
+        "publisher": {
+          "@type": "Organization",
+          "name": "SilverCore",
+          "url": "https://www.silvernote.fr/"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    </script>
+
   </head>
+
   <body>
+
     <div id="app"></div>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
