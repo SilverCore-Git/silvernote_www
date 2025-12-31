@@ -20,15 +20,6 @@ const closeMobileMenu = () => {
 onMounted(async () => {
   await nextTick();
 
-  // Animation de la navbar au chargement
-  gsap.from("nav", {
-    opacity: 0,
-    y: -40,
-    duration: 0.8,
-    ease: "back.out",
-    delay: 0.1,
-  });
-
   // Animation du logo
   gsap.from(".navbar-logo", {
     opacity: 0,
@@ -73,7 +64,7 @@ onMounted(async () => {
     <nav
         class="
             fixed top-6 inset-x-0 lg:mx-auto max-w-[1200px] z-50 px-4 py-4 mx-8 md:py-2  shadow-none rounded-[100px]
-            bg-white/20 backdrop-blur-3xl flex justify-between items-center transition-all duration-300 navbar
+            bg-white/20 backdrop-blur-2xl flex justify-between items-center transition-all duration-300
         "
     >
         <div class="navbar-logo flex items-center gap-2 ml-2">
