@@ -15,7 +15,7 @@
         <div>
             <SButton
                 :content="`Télécharger pour ${currentOS}`"
-                :href="getHref(currentOS)"
+                @click="downloadsCurrentOS"
             />
         </div>
 
@@ -25,22 +25,20 @@
                 v-for="card in downloads"
                 :key="card.os"
                 :href="getHref(card.os)"
-                class="download-card w-52 p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all
-                    border border-gray-200 hover:border-gray-300 
-                    flex flex-col items-center gap-4 cursor-pointer"
+                class="
+                    download-card p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all
+                    border border-gray-200 hover:border-gray-300 w-80 h-80
+                    flex flex-col items-center gap-4 cursor-pointer
+                  "
             >
             
-                <div class="text-4xl">
+                <div class="text-8xl p-5 object-cover">
                     <i class="bi" :class="card.icon" />
                 </div>
 
                 <h3 class="text-xl font-semibold capitalize">
                     {{ card.os }}
                 </h3>
-
-                <p class="text-sm text-gray-500 text-center">
-                    Télécharger la version {{ version }}
-                </p>
 
                 <button
                     class="mt-2 px-4 py-2 bg-[var(--primary)] text-white rounded-xl font-medium
@@ -86,6 +84,12 @@ const getHref = (os: string) => {
         const fileName = (downloads.find(_os => _os.os === os)?.fileName)?.replace('{{version}}', version.value.replace('v', ''));
         return `https://github.com/SilverCore-Git/silvernote_app/releases/download/${version.value}/${fileName}`;
     }
+}
+
+const downloadsCurrentOS = () => {
+
+    window.open(getHref(currentOS), '_self');
+  
 }
 
 
