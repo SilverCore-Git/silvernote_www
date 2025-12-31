@@ -13,13 +13,18 @@
   -moz-osx-font-smoothing: grayscale;
 
   --primary: #f28c28;
-  --primary-hover: #e67b11;
+  --primary-hover: #d67009;
 
 }
 
 .bg {
+  background: linear-gradient(to bottom, #9dc1e6 0%, #ecdfd1 100%);
+}
+
+.bg-with-white {
   background: linear-gradient(to bottom, #9dc1e6 0%, #ecdfd1 70%, #fff 100%);
 }
+
 
 /* Smooth scrolling */
 html {
