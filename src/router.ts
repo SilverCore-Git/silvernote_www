@@ -7,6 +7,9 @@ import NotFound from './views/_NotFound/NotFound.vue';
 import Http from './views/_redirect/http.vue';
 import Features from './views/Features/Features.vue';
 import FeaturesView from './views/Features/FeaturesView.vue';
+import Privacy from './views/Privacy/Privacy.vue';
+import TermsOfUse from './views/TermsOfUse/TermsOfUse.vue';
+import LegalNotices from './views/LegalNotices/LegalNotices.vue';
 import { PricingSection } from './components';
 
 
@@ -46,6 +49,24 @@ const routes = [
     name: 'fonctionnalitesView', 
     component: FeaturesView,
     meta: { title: 'Fonctionnalité - Silvernote' }
+  },
+  { 
+    path: '/privacy', 
+    name: 'Privacy', 
+    component: Privacy,
+    meta: { title: 'Politique de Confidentialité - Silvernote' }
+  },
+  { 
+    path: '/terms-of-use', 
+    name: 'TermsOfUse', 
+    component: TermsOfUse,
+    meta: { title: 'Conditions d\'utilisation - Silvernote' }
+  },
+  { 
+    path: '/legal-notices', 
+    name: 'LegalNotices', 
+    component: LegalNotices,
+    meta: { title: 'Mentions Légales - Silvernote' }
   },
   { 
     path: '/app', 

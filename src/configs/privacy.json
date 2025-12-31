@@ -1,0 +1,42 @@
+{
+  "title": "Politique de Confidentialité",
+  "lastUpdated": "2025-01-01",
+  "sections": [
+    {
+      "heading": "1. Introduction",
+      "content": "Silvernote s'engage à protéger votre vie privée. Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons vos données personnelles."
+    },
+    {
+      "heading": "2. Données que nous collectons",
+      "content": "Nous collectons les informations suivantes: votre adresse e-mail, votre profil utilisateur, vos notes et fichiers, vos préférences, et les données de votre appareil (type d'appareil, système d'exploitation). Nous collectons également des données d'utilisation pour améliorer notre service."
+    },
+    {
+      "heading": "3. Comment nous utilisons vos données",
+      "content": "Vos données sont utilisées pour: fournir et améliorer nos services, personnaliser votre expérience, vous envoyer des communications importantes, prévenir la fraude et les abus, et respecter les obligations légales."
+    },
+    {
+      "heading": "4. Sécurité des données",
+      "content": "Vos données sont protégées par le chiffrement de bout en bout. Nous utilisons des serveurs sécurisés et des protocoles de sécurité modernes. Cependant, aucun système n'est 100% sécurisé. Nous recommandons d'utiliser un mot de passe fort."
+    },
+    {
+      "heading": "5. Partage de données",
+      "content": "Nous ne partageons jamais vos données personnelles avec des tiers sans votre consentement, sauf si la loi l'exige. Vos notes ne sont partagées que si vous les choisissez explicitement."
+    },
+    {
+      "heading": "6. Cookies",
+      "content": "Silvernote utilise des cookies pour améliorer votre expérience utilisateur. Vous pouvez contrôler les cookies via les paramètres de votre navigateur. Certains cookies sont essentiels au fonctionnement de notre service."
+    },
+    {
+      "heading": "7. Vos droits",
+      "content": "Vous avez le droit d'accéder, de corriger ou de supprimer vos données personnelles. Vous pouvez également demander une copie de vos données ou vous opposer à certains traitements. Pour exercer ces droits, contactez-nous à support@silvernote.app."
+    },
+    {
+      "heading": "8. Modifications de cette politique",
+      "content": "Nous nous réservons le droit de modifier cette politique de confidentialité. Les modifications importantes seront communiquées par email. L'utilisation continue de Silvernote après les modifications implique votre acceptation."
+    },
+    {
+      "heading": "9. Contact",
+      "content": "Pour toute question concernant cette politique de confidentialité, veuillez nous contacter à privacy@silvernote.app ou utiliser notre formulaire de contact."
+    }
+  ]
+}
