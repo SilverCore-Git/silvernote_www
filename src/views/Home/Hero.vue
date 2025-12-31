@@ -2,10 +2,9 @@
 import { onMounted, nextTick, ref } from "vue";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SButton } from "@/components";
+import { SButton, SnoteStatus, Minuteur } from "@/components";
 import getVersion from "@/utils/getVersion";
 import openApp from "@/utils/openApp";
-import SnoteStatus from "../../components/common/SnoteStatus.vue";
 
 const version = ref<string>('');
 const showSStatus = ref<boolean>(false);
@@ -163,6 +162,11 @@ onMounted(async () => {
                     :nobg="true"
                 />
             </div>
+
+            <Minuteur
+                title="Silvernote sort dans :"
+                date="9-01-2026" 
+            />
 
             <div class="z-10 perspective-[2000px] w-full max-w-4xl">
                 <img 
