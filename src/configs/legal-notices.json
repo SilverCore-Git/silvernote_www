@@ -3,40 +3,40 @@
   "lastUpdated": "2025-01-01",
   "sections": [
     {
+      "heading": "0. Introduction",
+      "content": "Ces mentions légales concerne les sites app.silvernote.fr et www.silvernote.fr."
+    },
+    {
       "heading": "1. Identification de l'éditeur",
-      "content": "Nom: SilverCore\nFormes juridiques: SARL\nSiège social: France\nNuméro d'identification: [À compléter]\nAdresse e-mail de contact: contact@silvernote.app"
+      "content": "Nom: Silvercore\nFormes juridiques: Organisation sans structure juridique actuellement déclarée.\nSiège social: Lyon - France\nDirecteur de la publication: Félix Cornudet\nAdresse e-mail de contact: contact@silvercore.fr"
     },
     {
-      "heading": "2. Responsable de publication",
-      "content": "Directeur de publication: [À compléter]\nE-mail: director@silvernote.app"
+      "heading": "4. Hébergement",
+      "content": "Le site est auto-hébergé par Silvercore\nAdresse : 69004 - Lyon - France\nProtection et sécurité renforcées via Cloudflare (anti-bot, anti-DDoS, cache, proxy)"
     },
     {
-      "heading": "3. Hébergement",
-      "content": "Hébergeur: [À compléter]\nAdresse: [À compléter]\nTéléphone: [À compléter]"
-    },
-    {
-      "heading": "4. Propriété intellectuelle",
+      "heading": "5. Propriété intellectuelle",
       "content": "L'ensemble du contenu présent sur Silvernote (textes, images, vidéos, logos, etc.) est protégé par les droits d'auteur. Toute reproduction, distribution ou modification sans autorisation est interdite. Le contenu que vous créez reste votre propriété."
     },
     {
-      "heading": "5. Limitation de responsabilité",
-      "content": "SilverCore ne peut être tenu responsable des dommages résultant de l'accès au site ou de l'utilisation du service. Nous déclinons toute responsabilité pour les virus, les interruptions de service ou les problèmes de connexion."
+      "heading": "6. Limitation de responsabilité",
+      "content": "Les informations présentes sur le site sont fournies à titre indicatif.\nSilvercore ne peut être tenu responsable des dommages résultant de l'accès au site ou de l'utilisation du service. Nous déclinons toute responsabilité pour les virus, les interruptions de service ou les problèmes de connexion."
     },
     {
-      "heading": "6. Cookies et données personnelles",
-      "content": "Silvernote utilise des cookies pour améliorer l'expérience utilisateur. Pour plus d'informations sur la gestion de vos données personnelles, consultez notre politique de confidentialité."
+      "heading": "7. Cookies et données personnelles",
+      "content": "Silvernote utilise des cookies pour améliorer l'expérience utilisateur et pour le bon fonctionement du services.\nPour plus d'informations sur la gestion de vos données personnelles, consultez notre politique de confidentialité."
     },
     {
-      "heading": "7. Droit d'accès et de rectification",
-      "content": "Conformément à la loi Informatique et Libertés et au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles. Contactez-nous à dpo@silvernote.app pour exercer ces droits."
-    },
-    {
-      "heading": "8. Signalement d'abus",
-      "content": "Si vous constatez un contenu illégal ou abusif, veuillez le signaler immédiatement à abuse@silvernote.app. Nous traiterons votre signalement dans les meilleurs délais."
+      "heading": "8. Droit d'accès et de rectification",
+      "content": "Conformément à la loi Informatique et Libertés et au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles. Contactez-nous à contact@silvercore.fr pour exercer ces droits."
     },
     {
       "heading": "9. Coordonnées de contact",
-      "content": "Pour toute question relative aux mentions légales:\nE-mail: contact@silvernote.app\nTéléphone: [À compléter]\nAdresse: France"
+      "content": "Pour toute question relative aux mentions légales:\nE-mail: contact@silvernote.fr\nFormulaire : https://www.silvercore.fr/contact"
+    },
+    {
+      "heading": "10. Mise à jour",
+      "content": "Ces mentions légales peuvent être modifiées à tout moment afin de rester conformes à la législation en vigueur."
     }
   ]
 }
