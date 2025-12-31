@@ -68,6 +68,7 @@
                         <ul class="footer-links flex flex-col gap-2">
                             <li><RouterLink to="/terms-of-use" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Conditions</RouterLink></li>
                             <li><RouterLink to="/privacy" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Confidentialité</RouterLink></li>
+                            <li><RouterLink to="/legal-notices" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Mentions légales</RouterLink></li>
                             <li><RouterLink to="/contact" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Contact</RouterLink></li>
                             <li>‎ </li>
                         </ul>
@@ -87,6 +88,7 @@
                     <div class="footer-legal flex gap-6">
                         <RouterLink to="/privacy" class="text-sm text-gray-600 hover:text-[var(--primary)] transition-colors">Politique de confidentialité</RouterLink>
                         <RouterLink to="/terms-of-use" class="text-sm text-gray-600 hover:text-[var(--primary)] transition-colors">Conditions d'utilisation</RouterLink>
+                        <RouterLink to="/legal-notices" class="text-sm text-gray-600 hover:text-[var(--primary)] transition-colors">Mentions légales</RouterLink>
                     </div>
                 </div>
             </div>
