@@ -1,38 +1,30 @@
 {
   "title": "Politique de Confidentialité",
-  "lastUpdated": "2025-01-01",
+  "lastUpdated": "2026-01-01",
   "sections": [
     {
-      "heading": "1. Introduction",
-      "content": "Silvernote s'engage à protéger votre vie privée. Cette politique de confidentialité concerne les sites www.silvernote.fr et app.silvernote.fr explique comment nous collectons, utilisons et protégeons vos données personnelles."
+      "heading": "1. Collecte des données personnelles",
+      "content": "Dans le cadre de l’utilisation de l’application SaaS Silvernote, nous collectons différentes catégories de données personnelles.\nCela inclut notamment les données d’identification telles que le nom, le prénom (le cas échéant) et l’adresse e-mail.\nNous collectons également des données de connexion et d’authentification, comme les identifiants de connexion, les tokens d’authentification et les informations fournies par des services tiers d’authentification (Clerk).\nDes données liées à l’utilisation du service sont également collectées, notamment les notes créées, les contenus rédigés, les tags, les paramètres et préférences utilisateur.\nEnfin, certaines données techniques peuvent être collectées automatiquement, telles que l’adresse IP, le type de navigateur, le système d’exploitation, les journaux de connexion et les informations relatives à l’appareil utilisé."
     },
     {
-      "heading": "2. Données que nous collectons",
-      "content": "Nous collectons les informations suivantes par l'intermédiaire de Clerk Inc et Cloudflare Inc: votre adresse e-mail, votre profil utilisateur, vos préférences, et les données de votre appareil (type d'appareil, système d'exploitation). Nous collectons directement vos notes et tags."
+      "heading": "2. Utilisation des données",
+      "content": "Les données personnelles collectées sont utilisées afin d’assurer le bon fonctionnement de Silvernote.\nElles permettent notamment la gestion des comptes utilisateurs, incluant la création, l’authentification et l’administration des comptes.\nLes données sont également utilisées pour fournir les fonctionnalités principales du service, comme la création, l’édition, la sauvegarde et le partage de notes.\nElles contribuent à la sécurité de la plateforme, à la prévention des abus et à la détection des accès non autorisés.\nEnfin, certaines données peuvent être utilisées à des fins d’amélioration du service, d’analyse des performances et de support utilisateur."
     },
     {
-      "heading": "3. Comment nous utilisons vos données",
-      "content": "Vos données sont utilisées pour: fournir et améliorer nos services, personnaliser votre expérience, vous envoyer des communications importantes, et respecter les obligations légales."
+      "heading": "3. Partage des données",
+      "content": "Les données personnelles des utilisateurs de Silvernote ne sont ni vendues ni louées.\nElles peuvent toutefois être partagées avec des prestataires techniques strictement nécessaires au fonctionnement du service, tels que les services d’hébergement, d’authentification ou de maintenance.\nLes données peuvent également être communiquées si la loi l’exige ou dans le cadre d’une obligation légale.\nDans tous les cas, les tiers concernés sont soumis à des obligations strictes en matière de confidentialité et de protection des données."
     },
     {
-      "heading": "4. Partage de données",
-      "content": "Nous ne partageons jamais vos données personnelles avec des tiers sans votre consentement, sauf si la loi l'exige. Vos notes ne sont partagées que si vous les choisissez explicitement."
+      "heading": "4. Sécurité des données",
+      "content": "Silvernote met en œuvre des mesures techniques et organisationnelles appropriées afin de protéger les données personnelles des utilisateurs.\nCes mesures incluent notamment le chiffrement des communications via HTTPS/TLS renforcé par HSTS.\nDes sauvegardes régulières sont effectuées et les accès sont surveillés et journalisés.\nMalgré ces précautions, aucun système n’est totalement sécurisé, mais Silvernote s’engage à réagir rapidement en cas d’incident."
     },
     {
-      "heading": "5. Cookies",
-      "content": "Silvernote utilise des cookies pour améliorer votre expérience utilisateur et l'authentification. Vous pouvez contrôler les cookies via les paramètres de votre navigateur. Certains cookies sont essentiels au fonctionnement de notre service."
+      "heading": "5. Droits des utilisateurs",
+      "content": "Conformément au Règlement Général sur la Protection des Données (RGPD), les utilisateurs disposent de plusieurs droits concernant leurs données personnelles.\nIls disposent notamment d’un droit d’accès, de rectification, de suppression (droit à l’oubli), de limitation du traitement et d’opposition.\nIls bénéficient également d’un droit à la portabilité de leurs données.\nCes droits peuvent être exercés en contactant Silvernote via les coordonnées indiquées dans la section Contact. Une réponse sera apportée dans un délai maximal d’un mois."
     },
     {
-      "heading": "6. Vos droits",
-      "content": "Vous avez le droit d'accéder, de corriger ou de supprimer vos données personnelles. Vous pouvez également demander une copie de vos données ou vous opposer à certains traitements. Pour exercer ces droits, contactez-nous à support@silvercore.fr."
-    },
-    {
-      "heading": "7. Modifications de cette politique",
-      "content": "Nous nous réservons le droit de modifier cette politique de confidentialité. Les modifications importantes seront communiquées. L'utilisation continue de Silvernote après les modifications implique votre acceptation."
-    },
-    {
-      "heading": "8. Contact",
-      "content": "Pour toute question concernant cette politique de confidentialité, veuillez nous contacter à contact@silvercore.fr ou utiliser notre formulaire de contact."
+      "heading": "6. Contact",
+      "content": "Pour toute question ou demande relative à la présente politique de confidentialité ou au traitement des données personnelles, les utilisateurs peuvent contacter Silvernote.\nOrganisation : Silvercore\nApplication : Silvernote\nSite web : https://www.silvernote.fr et https://app.silvernote.fr\nAdresse e-mail : contact@silvercore.fr"
     }
   ]
 }
