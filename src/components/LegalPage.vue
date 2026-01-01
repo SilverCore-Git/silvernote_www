@@ -1,8 +1,8 @@
 <template>
-  <div class="legal-page pb-20 pt-40">
+  <div class="legal-page pb-20 pt-40 bg">
     <div class="legal-container ">
       <!-- Header -->
-      <div class="legal-header bg">
+      <div class="legal-header ">
         <h1>{{ config.title }}</h1>
         <p v-if="config.lastUpdated" class="last-updated">
           Dernière mise à jour: {{ formatDate(config.lastUpdated) }}

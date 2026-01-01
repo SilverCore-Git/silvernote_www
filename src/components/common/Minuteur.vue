@@ -169,7 +169,7 @@ const triggerConfetti = (): void => {
 onMounted(() => {
   calculateTimeLeft();
   intervalId = window.setInterval(calculateTimeLeft, 1000);
-  if (!isFinished.value)
+  if (isFinished.value)
   {
     setInterval(() => triggerConfetti(), 5000)
   }

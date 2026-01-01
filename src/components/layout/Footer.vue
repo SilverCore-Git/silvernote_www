@@ -70,7 +70,6 @@
                             <li><RouterLink to="/privacy" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Confidentialité</RouterLink></li>
                             <li><RouterLink to="/legal-notices" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Mentions légales</RouterLink></li>
                             <li><RouterLink to="/contact" class="text-sm text-gray-700 hover:text-[var(--primary)] transition-colors">Contact</RouterLink></li>
-                            <li>‎ </li>
                         </ul>
                     </div>
 
