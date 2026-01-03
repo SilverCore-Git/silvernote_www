@@ -62,7 +62,7 @@ export const capitalize = (text: string): string => {
 /**
  * Génère une couleur aléatoire
  */
-export const randomColor = (): string => {
+export const randomColor = (): string | undefined => {
   const colors = ["#f28c28", "#6b7280", "#10b981", "#3b82f6", "#8b5cf6", "#ec4899"];
   return colors[Math.floor(Math.random() * colors.length)];
 };

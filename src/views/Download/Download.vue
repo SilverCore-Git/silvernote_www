@@ -15,6 +15,7 @@
         <div>
             <SButton
                 :content="`Télécharger pour ${currentOS}`"
+                href="none"
                 @click="downloadsCurrentOS"
             />
         </div>

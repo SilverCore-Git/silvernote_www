@@ -1,5 +1,5 @@
 export async function getVersionFromGitHub
-(repo: string, branch: string = "main"): Promise<string | undefined>
+(repo: string, branch: string = "main"): Promise<string>
 {
     const url = `https://raw.githubusercontent.com/${repo}/${branch}/package.json`;
 
@@ -14,7 +14,7 @@ export async function getVersionFromGitHub
         return pkg.version;
     } catch (err) {
         console.error("Impossible de récupérer la version :", err);
-        return undefined;
+        return '0.0.0';
     }
 }
 

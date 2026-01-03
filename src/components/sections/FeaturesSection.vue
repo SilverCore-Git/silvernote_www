@@ -30,7 +30,7 @@
                     </p>
 
                     <SButton
-                        :href="prop.btn?.href.startsWith('https://app.silvernote.fr') 
+                        :href="prop.btn.href.startsWith('https://app.silvernote.fr') 
                                 ? '/redirect/' + openApp({ utm_medium: `features-${prop.subject}`, type: 'href' })
                                 : prop.btn?.href"
                         :content="prop.btn?.content || 'Essayer silvernote'"
@@ -84,7 +84,7 @@ const props = defineProps<{
         subject: string;
         title: string;
         description: string;
-        btn?: {
+        btn: {
             href: string;
             content: string;
         };

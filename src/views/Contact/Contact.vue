@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { onMounted, nextTick } from "vue";
 import gsap from "gsap";
-import { SButton } from "@/components";
 
 
 onMounted(async () => {

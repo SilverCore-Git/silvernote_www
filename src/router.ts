@@ -8,8 +8,8 @@ import Http from './views/_redirect/http.vue';
 import Features from './views/Features/Features.vue';
 import FeaturesView from './views/Features/FeaturesView.vue';
 import Privacy from './views/Privacy/Privacy.vue';
-import TermsOfUse from './views/TermsOfUse/TermsOfUse.vue';
-import LegalNotices from './views/LegalNotices/LegalNotices.vue';
+import TermsOfUse from './views/Terms-of-use/TermsOfUse.vue';
+import LegalNotices from './views/Legal-notices/LegalNotices.vue';
 import { PricingSection } from './components';
 
 
