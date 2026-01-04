@@ -2,6 +2,7 @@
 import { ref, onMounted, nextTick } from "vue";
 import { SButton } from "@/components/common";
 import gsap from "gsap";
+import { useRouter } from "vue-router";
 
 const navbar_config = [
   { name: "Accueil", href: "/" },
@@ -12,6 +13,7 @@ const navbar_config = [
 
 const btn = { content: "Télécharger", href: "/download" };
 const mobileMenuOpen = ref(false);
+const router = useRouter();
 
 const closeMobileMenu = () => {
   mobileMenuOpen.value = false;
@@ -61,101 +63,126 @@ onMounted(async () => {
 </script>
 
 <template>
-    <nav
-        class="
-            fixed top-6 inset-x-0 lg:mx-auto max-w-[1200px] z-50 px-4 py-4 mx-8 md:py-2  shadow-none rounded-[100px]
-            bg-white/20 backdrop-blur-xl flex justify-between items-center transition-all duration-300
-        "
-    >
-        <div class="navbar-logo flex items-center gap-2 ml-2">
-            <img
-                src="/assets/logo/snote/favicon.svg"
-                alt="Silvernote Logo"
-                class="w-10"
-            />
-            <span class="text-2xl font-semibold text-[#1A1615]">Silvernote</span>
-        </div>
 
-        <!-- Menu Desktop -->
-        <div class="navbar-menu-desktop hidden md:flex items-center gap-4">
-            <SButton
-                v-for="tab in navbar_config"
-                :key="tab.name"
-                :nobg="true"
-                :content="tab.name"
-                :href="tab.href"
-            />
-        </div>
+    <div class="fixed top-0 inset-x-0 z-50 flex justify-center">
 
-        <!-- Bouton Télécharger Desktop -->
-        <SButton
-            class="navbar-download-btn hidden md:block"
-            :content="btn.content"
-            :href="btn.href"
-        />
-
-        <!-- Mobile Menu Button -->
-        <button
-            class="navbar-mobile-btn md:hidden flex items-center justify-center w-10 h-10 rounded-full hover:bg-white/20 transition-colors"
-            @click="mobileMenuOpen = !mobileMenuOpen"
-            aria-label="Toggle menu"
+        <nav
+            class="
+                mt-4
+                w-full
+                max-w-[1200px]
+                mx-4
+                px-4 py-4 md:py-2
+                rounded-[100px]
+                bg-white/20 backdrop-blur-xl
+                flex justify-between items-center
+                transition-all duration-300
+            "
         >
-            <svg
-                class="w-6 h-6 text-[#1A1615] transition-transform duration-300"
-                :style="{ transform: mobileMenuOpen ? 'rotate(90deg)' : 'rotate(0)' }"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-            </svg>
-        </button>
 
-        <!-- Mobile Menu Overlay -->
-        <transition name="fade">
-            <div
-                v-if="mobileMenuOpen"
-                class="fixed inset-0 md:hidden z-40"
-                @click="closeMobileMenu"
-            ></div>
-        </transition>
+            <div 
+                class="navbar-logo flex items-center gap-2 ml-2 cursor-pointer"
+                @click="router.push('/')"
+            >
+                <img
+                    src="/assets/logo/snote/favicon.svg"
+                    alt="Silvernote Logo"
+                    class="w-10"
+                />
+                <span class="text-2xl font-semibold text-[#1A1615]">Silvernote</span>
+            </div>
+
+            <!-- Menu Desktop -->
+            <div class="navbar-menu-desktop hidden md:flex items-center gap-4">
+                <SButton
+                    v-for="tab in navbar_config"
+                    :key="tab.name"
+                    :nobg="true"
+                    :content="tab.name"
+                    :href="tab.href"
+                />
+            </div>
+
+            <!-- Bouton Télécharger Desktop -->
+            <SButton
+                class="navbar-download-btn hidden md:block"
+                :content="btn.content"
+                :href="btn.href"
+            />
+
+            <!-- Mobile Menu Button -->
+            <button
+                class="
+                    navbar-mobile-btn md:hidden 
+                    flex items-center justify-center
+                    w-11 h-11 rounded-full hover:bg-white/20 
+                    transition-colors cursor-pointer
+                "
+                @click="mobileMenuOpen = !mobileMenuOpen"
+                aria-label="Toggle menu"
+            >
+                <i
+                    class="
+                        bi bi-list 
+                        text-3xl font-bold text-black
+                        transition-transform duration-300"
+                    :style="{ transform: mobileMenuOpen ? 'rotate(90deg)' : 'rotate(0)' }"
+                />
+            </button>
+
+        </nav>
 
         <!-- Mobile Menu Dropdown -->
         <transition name="slide-down">
+
             <div
                 v-if="mobileMenuOpen"
-                class="absolute top-full left-0 right-0 mt-4 mx-4 md:hidden bg-white/20 backdrop-blur-3xl rounded-3xl shadow-lg overflow-hidden z-50"
+                class="
+                        absolute top-full left-0 right-0 
+                        mt-4 mx-4 md:hidden z-50
+                        bg-white/20 backdrop-blur-xl 
+                        rounded-4xl shadow-lg overflow-hidden
+                "
             >
-                <div class="flex flex-col p-4 space-y-2">
-                    <button
+
+                <div
+                    class="flex flex-col p-4 space-y-2"
+                    @click="closeMobileMenu"
+                >
+
+                    <SButton
                         v-for="tab in navbar_config"
                         :key="tab.name"
-                        @click="closeMobileMenu"
-                        class="text-left text-[#1A1615] px-4 py-3 rounded-2xl hover:bg-white/20 transition-colors font-medium"
-                    >
-                        <a :href="tab.href">{{ tab.name }}</a>
-                    </button>
+                        :nobg="true"
+                        :content="tab.name"
+                        :href="tab.href"
+                        twstyle="w-full"
+                    />
+
                     <div class="border-t border-white/20 pt-2 mt-2">
-                        <button
-                            @click="closeMobileMenu"
-                            class="w-full"
-                        >
-                            <SButton
-                                :content="btn.content"
-                                :href="btn.href"
-                            />
-                        </button>
+
+                        <SButton
+                            :content="btn.content"
+                            :href="btn.href"
+                            twstyle="w-full"
+                        />
+
                     </div>
+
                 </div>
+
             </div>
+
         </transition>
 
-    </nav>
+        <!-- Mobile Menu Overlay -->
+        <div
+            v-if="mobileMenuOpen"
+            class="fixed inset-0 md:hidden z-30"
+            @click="closeMobileMenu"
+        ></div>
+
+    </div>
 
 </template>
 
