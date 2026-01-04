@@ -1,0 +1,50 @@
+{
+  "title": "Conditions Générales d’Utilisation",
+  "lastUpdated": "2025-01-01",
+  "sections": [
+    {
+      "heading": "1. Objet",
+      "content": "Les présentes Conditions Générales d’Utilisation (CGU) ont pour objet de définir les modalités d’accès et d’utilisation de l’application SaaS Silvernote, accessible via l’ensemble des sous-domaines du nom de domaine silvernote.fr.\n\nL’utilisation de Silvernote implique l’acceptation pleine et entière des présentes CGU."
+    },
+    {
+      "heading": "2. Description du service",
+      "content": "Silvernote est une application de prise de notes accessible via le web, des applications mobiles et des applications desktop.\n\nLe service est actuellement proposé gratuitement. Des fonctionnalités freemium ou payantes pourront être proposées ultérieurement."
+    },
+    {
+      "heading": "3. Accès au service et création de compte",
+      "content": "L’accès à Silvernote nécessite la création d’un compte utilisateur.\n\nL’inscription peut s’effectuer via une adresse e-mail et un mot de passe ou via un service d’authentification tiers (SSO), notamment Google.\n\nL’utilisateur s’engage à fournir des informations exactes et à maintenir la confidentialité de ses identifiants."
+    },
+    {
+      "heading": "4. Utilisation du service",
+      "content": "L’utilisateur peut créer des notes, les organiser, les partager avec d’autres utilisateurs, collaborer en temps réel et utiliser des fonctionnalités assistées par intelligence artificielle.\n\nToute tentative de reverse engineering, d’abus technique, de contournement des limitations ou d’atteinte au bon fonctionnement du service est strictement interdite."
+    },
+    {
+      "heading": "5. Contenus utilisateurs",
+      "content": "Les contenus créés par les utilisateurs (notes, fichiers, données) restent leur propriété.\n\nL’utilisateur peut exporter ses contenus dans différents formats (notamment .snote, .html ou autres formats disponibles).\n\nSilvernote se réserve le droit de supprimer automatiquement certains contenus, notamment en cas d’inactivité prolongée, de contraintes techniques ou de violation des présentes CGU."
+    },
+    {
+      "heading": "6. Données et confidentialité",
+      "content": "Silvernote ne lit pas le contenu des notes des utilisateurs.\n\nLes traitements de données personnelles sont réalisés conformément à la politique de confidentialité accessible depuis l’application et les sites Silvernote."
+    },
+    {
+      "heading": "7. Suspension et suppression de compte",
+      "content": "Silvernote se réserve le droit de suspendre ou de supprimer un compte utilisateur, sans préavis, s’il estime que cela est nécessaire, notamment en cas de non-respect des présentes CGU, d’abus technique ou de comportement portant atteinte au service.\n\nLa suppression d’un compte entraîne la suppression définitive des données associées, sans obligation de conservation."
+    },
+    {
+      "heading": "8. Évolution du service",
+      "content": "Silvernote se réserve le droit de faire évoluer, modifier, suspendre ou interrompre tout ou partie du service, temporairement ou définitivement, sans préavis.\n\nL’éditeur ne pourra être tenu responsable des conséquences liées à ces évolutions."
+    },
+    {
+      "heading": "9. Responsabilité",
+      "content": "Silvernote est fourni en l’état. L’éditeur ne garantit pas une disponibilité continue et ne saurait être tenu responsable des dommages indirects résultant de l’utilisation ou de l’impossibilité d’utiliser le service.\n\nL’utilisateur est seul responsable de l’usage qu’il fait de Silvernote et des contenus qu’il y stocke."
+    },
+    {
+      "heading": "10. Liens vers d’autres documents",
+      "content": "Les présentes CGU s’articulent avec les mentions légales et la politique de confidentialité de Silvernote.\n\nEn cas de contradiction, les CGU prévalent pour tout ce qui concerne l’utilisation du service."
+    },
+    {
+      "heading": "11. Droit applicable",
+      "content": "Les présentes CGU sont régies par le droit français.\n\nEn cas de litige, et à défaut de résolution amiable, les tribunaux français seront seuls compétents."
+    }
+  ]
+}

@@ -1,103 +1,107 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import Home from './views/Home/Home.vue';
+import App from './views/_redirect/app.vue';
+import Download from './views/Download/Download.vue';
+import Contact from './views/Contact/Contact.vue';
+import NotFound from './views/_NotFound/NotFound.vue';
+import Http from './views/_redirect/http.vue';
+import Features from './views/Features/Features.vue';
+import FeaturesView from './views/Features/FeaturesView.vue';
+import Privacy from './views/Privacy/Privacy.vue';
+import TermsOfUse from './views/Terms-of-use/TermsOfUse.vue';
+import LegalNotices from './views/Legal-notices/LegalNotices.vue';
+import { PricingSection } from './components';
 
-import Home from './views/Home.vue';
-import Download from './views/Download.vue';
-import Conditions_general_utilisation from './views/Conditions_general_utilisation.vue';
-import Politique_de_confidentialite from './views/Politique_de_confidentialite.vue';
-import Mentions_legales from './views/Mentions_legales.vue';
-import Cancel from './views/pay/Cancel.vue';
-import Success from './views/pay/Success.vue';
-import Pricing from './views/pay/Pricing.vue';
-import Profile from './views/user/Profile.vue';
-import { ConnectionPage } from './lib/silvernote-vue';
 
 const routes = [
-
   { 
     path: '/', 
     name: 'Home', 
     component: Home,
-    props: {},
-    meta: { title: 'SilverNote : vos notes partout !' }
+    meta: { title: 'Silvernote - vos notes accessibles partout et simplement' }
   },
   { 
     path: '/download', 
-    name: 'download', 
+    name: 'Download', 
     component: Download,
-    props: {},
-    meta: { title: 'SilverNote - download' }
-  },
-
-  { 
-    path: '/politique-de-confidentialite', 
-    name: 'politique-de-confidentialite', 
-    component: Politique_de_confidentialite,
-    props: {},
-    meta: { title: 'SilverNote - confidentialité' }
+    meta: { title: 'Télécharger - Silvernote' }
   },
   { 
-    path: '/conditions-general-utilisation', 
-    name: 'conditions-general-utilisation', 
-    component: Conditions_general_utilisation,
-    props: {},
-    meta: { title: 'SilverNote - conditions general utilisation' }
+    path: '/contact', 
+    name: 'Contact', 
+    component: Contact,
+    meta: { title: 'Contactez-nous - Silvernote' }
   },
   { 
-    path: '/mentions-legales', 
-    name: 'mentions-legales', 
-    component: Mentions_legales,
-    props: {},
-    meta: { title: 'SilverNote - mentions legales' }
-  },
-
-  { 
-    path: '/pay/success', 
-    name: 'pay success', 
-    component: Success,
-    props: {},
-    meta: { title: 'SilverNote - fin du payement' }
+    path: '/pricing', 
+    name: 'Pricing', 
+    component: PricingSection,
+    meta: { title: 'Tarifs - Silvernote' }
   },
   { 
-    path: '/pay/cancel', 
-    name: 'pay cancel', 
-    component: Cancel,
-    props: {},
-    meta: { title: 'SilverNote - annulation du payement' }
+    path: '/features', 
+    name: 'FeaturesList', 
+    component: Features,
+    meta: { title: 'Fonctionnalité - Silvernote' }
   },
   { 
-    path: '/pay/pricing/:priceId', 
-    name: 'pricing', 
-    component: Pricing,
-    props: true,
-    meta: { title: 'SilverNote - annoncement du produit' }
+    path: '/features/:slug', 
+    name: 'fonctionnalitesView', 
+    component: FeaturesView,
+    meta: { title: 'Fonctionnalité - Silvernote' }
   },
-
   { 
-    path: '/user/profile', 
-    name: 'profile', 
-    component: Profile,
-    props: {},
-    meta: { title: 'SilverNote - profile' }
+    path: '/privacy', 
+    name: 'Privacy', 
+    component: Privacy,
+    meta: { title: 'Politique de Confidentialité - Silvernote' }
   },
-
-
-
   { 
-    path: '/auth', 
-    name: 'auth', 
-    component: ConnectionPage,
-    props: {},
-    meta: { title: 'SilverNote - connection' }
+    path: '/terms-of-use', 
+    name: 'TermsOfUse', 
+    component: TermsOfUse,
+    meta: { title: 'Conditions d\'utilisation - Silvernote' }
   },
-
+  { 
+    path: '/legal-notices', 
+    name: 'LegalNotices', 
+    component: LegalNotices,
+    meta: { title: 'Mentions Légales - Silvernote' }
+  },
+  { 
+    path: '/app', 
+    name: 'redirect-app', 
+    component: App,
+    meta: { title: 'redirection - Silvernote' }
+  },
+  { 
+    path: '/redirect/:path(.*)', 
+    name: 'http-app', 
+    component: Http,
+    meta: { title: 'redirection - Silvernote' }
+  },
+  { 
+    path: '/:pathMatch(.*)*', 
+    name: 'NotFound', 
+    component: NotFound,
+    meta: { title: 'Page non trouvée - Silvernote' }
+  }
 ]
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
+  scrollBehavior(to, _from, _savedPosition) {
+    if (to.hash) {
+      const el = document.querySelector(to.hash);
+      if (el) return { top: (el as HTMLElement).offsetTop, behavior: 'smooth' };
+    }
+    return { top: 0 };
+  }
 });
 
-router.beforeEach((to, _from, next) => {
+router.beforeEach((to: any, _from: any, next: any) => {
   const title = to.meta.title as string;
 
   if (title) {
@@ -116,6 +120,7 @@ router.beforeEach((to, _from, next) => {
 
   next();
 });
+
 
 
 export default router

@@ -1,0 +1,103 @@
+[
+  {
+    "slug": "real-time-editing",
+    "icon": "bi-people-fill",
+    "title": "Édition en temps réel",
+    "description": "Collaborez simultanément avec d'autres utilisateurs sur les mêmes notes.",
+    "details": "Travaillez ensemble en temps réel avec des mises à jour instantanées et une synchronisation fluide.",
+    "features": [
+      "Modifications visibles instantanément",
+      "Curseurs en direct pour chaque collaborateur",
+      "Gestion des permissions"
+    ]
+  },
+  {
+    "slug": "cloud-sync",
+    "icon": "bi-cloud-arrow-up-fill",
+    "title": "Synchronisation cloud",
+    "description": "Accédez à vos notes depuis n’importe quel appareil.",
+    "details": "Toutes vos notes sont automatiquement synchronisées sur le cloud en temps réel pour une continuité parfaite.",
+    "features": [
+      "Accès multi-appareils",
+      "Synchronisation instantanée",
+      "Aucune sauvegarde manuelle"
+    ]
+  },
+  {
+    "slug": "markdown-editor",
+    "icon": "bi-markdown-fill",
+    "title": "Éditeur Markdown avancé",
+    "description": "Écrivez rapidement avec un éditeur puissant et intuitif.",
+    "details": "Profitez d’un éditeur moderne avec support Markdown et blocs dynamiques.",
+    "features": [
+      "Support Markdown complet",
+      "Blocs de contenu flexibles",
+      "Raccourcis clavier intelligents",
+      "Mise en forme Rich Text intégrée"
+    ]
+  },
+  {
+    "slug": "organization-tags",
+    "icon": "bi-tags-fill",
+    "title": "Organisation intelligente",
+    "description": "Classez et retrouvez vos notes facilement.",
+    "details": "Organisez vos notes avec des tags, des épingles et une recherche performante.",
+    "features": [
+      "Tags personnalisés",
+      "Notes épinglées",
+      "Recherche rapide et précise",
+      "Catégorisation des notes partagées"
+    ]
+  },
+  {
+    "slug": "sharing-permissions",
+    "icon": "bi-shield-lock-fill",
+    "title": "Partage avec permissions",
+    "description": "Partagez vos notes en toute sécurité.",
+    "details": "Personnalisez votre partage pour garantir la confidentialité et la sécurité de vos notes.",
+    "features": [
+      "Accès en lecture seule ou édition",
+      "Mot de passe pour le partage",
+      "Partage sécurisé par lien",
+      "Expiration des liens de partage personnalisable"
+    ]
+  },
+  {
+    "slug": "cross-platform",
+    "icon": "bi-laptop-fill",
+    "title": "Multi-plateforme",
+    "description": "Utilisez Silvernote partout.",
+    "details": "Disponible sur web, PC et mobile pour une expérience fluide et unifiée.",
+    "features": [
+      "Application web",
+      "Application desktop (Windows, macOS, Linux)",
+      "Application mobile (iOS et Android)",
+      "Synchronisation complète entre appareils"
+    ]
+  },
+  {
+    "slug": "export-notes",
+    "icon": "bi-file-earmark-arrow-down-fill",
+    "title": "Export des notes",
+    "description": "Exportez vos notes dans différents formats pour les sauvegarder ou les partager.",
+    "details": "Silvernote permet d’exporter vos notes en SNOTE, HTML ou PDF pour une utilisation flexible.",
+    "features": [
+      "Export au format SNOTE, HTML et PDF",
+      "Conservation de la mise en forme",
+      "Export rapide et simple"
+    ]
+  },
+  {
+    "slug": "silveria",
+    "icon": "bi-robot",
+    "title": "SilverIA",
+    "description": "Votre assistant intelligent intégré pour améliorer vos notes.",
+    "details": "SilverIA Agent vous aide à rédiger, reformuler, résumer ou enrichir vos notes.",
+    "features": [
+      "Rédaction automatique de contenu",
+      "Suggestions d’amélioration et de reformulation",
+      "Résumé instantané des notes",
+      "Assistance contextuelle en temps réel"
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "title": "Mentions légales",
+  "lastUpdated": "2025-01-01",
+  "sections": [
+    {
+      "heading": "1. Éditeur de l’application et des sites",
+      "content": "L’application SaaS Silvernote, accessible via l’ensemble des sous-domaines du nom de domaine silvernote.fr, est éditée par :\n\nNom / Dénomination : Silvercore\nStatut : Organisation sans forme juridique déclarée à ce jour\nResponsable légal / Directeur de la publication : Félix Cornudet\nAdresse : Lyon, France\nAdresse e-mail : contact@silvercore.fr"
+    },
+    {
+      "heading": "2. Directeur de la publication",
+      "content": "Le directeur de la publication est :\n\nFélix Cornudet\nAdresse e-mail : felix@silvercore.fr"
+    },
+    {
+      "heading": "3. Hébergement",
+      "content": "L’application et les sites Silvernote sont auto-hébergés par :\n\nHébergeur : Silvercore\nAdresse : 69004 Lyon, France\nAdresse e-mail : host@silvercore.fr"
+    },
+    {
+      "heading": "4. Accès à l’application",
+      "content": "Silvernote est une application SaaS accessible via un navigateur web, une application mobile et une application desktop.\n\nL’éditeur se réserve le droit d’interrompre temporairement l’accès au service pour des raisons de maintenance, de mise à jour ou pour toute autre contrainte technique."
+    },
+    {
+      "heading": "5. Propriété intellectuelle",
+      "content": "L’ensemble des éléments composant Silvernote, incluant notamment le code source, les interfaces, les textes, les logos, les graphismes et les bases de données, est la propriété exclusive de Silvercore, sauf mention contraire.\n\nToute reproduction, représentation, modification, publication ou adaptation, totale ou partielle, sans autorisation écrite préalable, est interdite et constitue une contrefaçon au sens du Code de la propriété intellectuelle."
+    },
+    {
+      "heading": "6. Données personnelles",
+      "content": "Silvernote collecte et traite des données personnelles dans le cadre de son fonctionnement.\n\nResponsable du traitement : Félix Cornudet\nAdresse e-mail : felix@silvercore.fr\n\nLes modalités de collecte, de traitement, de conservation des données ainsi que les droits des utilisateurs sont détaillés dans la politique de confidentialité accessible depuis l’application et les sites Silvernote."
+    },
+    {
+      "heading": "7. Responsabilité",
+      "content": "L’éditeur s’efforce de fournir des informations exactes et à jour. Toutefois, il ne saurait être tenu responsable des erreurs ou omissions, d’une indisponibilité temporaire du service ou de tout dommage indirect résultant de l’utilisation de Silvernote.\n\nL’utilisateur est seul responsable de l’usage qu’il fait de l’application."
+    },
+    {
+      "heading": "8. Activité réglementée",
+      "content": "L’activité exercée par Silvernote n’entre dans aucune catégorie d’activité réglementée au sens du droit français."
+    },
+    {
+      "heading": "9. Droit applicable",
+      "content": "Les présentes mentions légales sont régies par le droit français. En cas de litige, et à défaut de résolution amiable, les tribunaux français seront seuls compétents."
+    }
+  ]
+}
