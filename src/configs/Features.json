@@ -1,6 +1,6 @@
 [
   {
-    "img": "/assets/img/silveria_screen.webp",
+    "img": "/assets/img/silveria_screen.png",
     "subject": "SilverIA",
     "title": "SilverIA, votre agent IA",
     "description": "Fatigué de perdre du temps à organiser vos idées ? SilverAI est là pour ça ! Notre assistant intelligent est directement intégré à SilverNote et à silvercore pour transformer la manière dont vous travaillez.",
@@ -17,7 +17,7 @@
   },
 
   {
-    "img": "/assets/img/editor_screen.webp",
+    "img": "/assets/img/editor-screen.png",
     "subject": "markdown",
     "title": "Edition markdown",
     "description": "Mettez en forme vos idées, vos projets simplement avec l'édition markdown.",

@@ -46,13 +46,13 @@ onMounted(async () => {
             </h2>
 
             <p class="usesnote-description text-lg md:text-xl text-gray-700 max-w-2xl">
-                Essaye Silvenote gratuitement dès maintenant.
+                Décourvre Silvenote gratuitement dès maintenant
             </p>
 
             <div class="usesnote-buttons flex flex-col sm:flex-row gap-4 justify-center w-full">
                 <div>
                     <SButton
-                        content="Essayer Silvernote"
+                        content="Décourvrir Silvernote"
                         :href="'/redirect/'+openApp({ utm_medium: 'call-to-action', type: 'href' })"
                     />
                 </div>
