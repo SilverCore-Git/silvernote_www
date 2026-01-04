@@ -158,7 +158,7 @@ onMounted(async () => {
                 />
                 <SButton
                     content="Voir les fonctionnalités"
-                    href="#features"
+                    href="/features"
                     :nobg="true"
                 />
             </div>
