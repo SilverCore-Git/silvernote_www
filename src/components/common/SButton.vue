@@ -1,10 +1,18 @@
 <template>
-  <RouterLink v-if="href && href != 'none'" :to="href"><button
-    :class="nobg ? 'bg-white/10 hover:bg-white/20 text-black border-2 border-white/30' : 'bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white shadow-lg hover:shadow-xl'"
+
+  <RouterLink v-if="href && href != 'none'" :to="href">
+  <button
+    :class="
+      twstyle,
+      nobg
+        ? 'bg-white/10 hover:bg-white/20 text-black border-2 border-white/30' 
+        : 'bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white shadow-lg hover:shadow-xl'
+    "
     class="
       font-semibold rounded-full text-lg
       transition-all duration-300 cursor-pointer 
-      active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--primary)]
+      active:scale-95 focus:outline-none focus:ring-2
+      focus:ring-offset-2 focus:ring-[var(--primary)]
     "
     @mouseenter="hovered = true"
     @mouseleave="hovered = false"
@@ -65,6 +73,7 @@ defineProps<{
   content: string;
   nobg?: boolean;
   href: string;
+  twstyle?: string;
 }>();
 
 const hovered = ref<boolean>(false);
