@@ -13,51 +13,51 @@ const toggleFAQ = (index: number) => {
 
 gsap.registerPlugin(ScrollTrigger);
 
-const sectionEl = ref<HTMLElement | null>(null);
+//const sectionEl = ref<HTMLElement | null>(null);
 
 onMounted(async () => {
     await nextTick();
 
-    const section = sectionEl.value;
-    if (!section) return;
+    // const section = sectionEl.value;
+    // if (!section) return;
 
-    const headerTexts = section.querySelectorAll('.text-center.mb-12 > *');
-    const faqItems = section.querySelectorAll('.space-y-4 > div');
-    const cta = section.querySelector('.mt-12');
+    // const headerTexts = section.querySelectorAll('.text-center.mb-12 > *');
+    // const faqItems = section.querySelectorAll('.space-y-4 > div');
+    // const cta = section.querySelector('.mt-12');
 
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: section,
-            start: "top 80%",
-            toggleActions: "play none none reverse",
-        }
-    });
+    // const tl = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: section,
+    //         start: "top 80%",
+    //         toggleActions: "play none none reverse",
+    //     }
+    // });
 
-    tl.from(headerTexts, {
-        opacity: 0,
-        y: 20,
-        duration: 0.6,
-        stagger: 0.2,
-        ease: 'power2.out'
-    });
+    // tl.from(headerTexts, {
+    //     opacity: 0,
+    //     y: 20,
+    //     duration: 0.6,
+    //     stagger: 0.2,
+    //     ease: 'power2.out'
+    // });
 
-    tl.from(faqItems, {
-        opacity: 0,
-        y: 20,
-        duration: 0.5,
-        stagger: 0.1,
-        ease: 'power2.out'
-    }, "-=0.3");
+    // tl.from(faqItems, {
+    //     opacity: 0,
+    //     y: 20,
+    //     duration: 0.5,
+    //     stagger: 0.1,
+    //     ease: 'power2.out'
+    // }, "-=0.3");
 
-    if (cta) {
-        tl.from(cta, {
-            opacity: 0,
-            y: 30,
-            scale: 0.95,
-            duration: 0.8,
-            ease: 'power3.out'
-        }, "-=0.5");
-    }
+    // if (cta) {
+    //     tl.from(cta, {
+    //         opacity: 0,
+    //         y: 30,
+    //         scale: 0.95,
+    //         duration: 0.8,
+    //         ease: 'power3.out'
+    //     }, "-=0.5");
+    // }
 });
 </script>
 

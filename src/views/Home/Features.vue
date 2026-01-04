@@ -6,7 +6,7 @@ import SButton from '../../components/common/SButton.vue';
 
 <template>
     
-    <div class="features-wrapper relative space-y-40 w-screen" id="features">
+    <div class="features-wrapper relative space-y-20 w-screen " id="features">
         
       <FeaturesSection
         v-for="(feature, index) in Features_config"

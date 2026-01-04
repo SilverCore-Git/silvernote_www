@@ -1,6 +1,6 @@
 <template>
     
-    <div class="space-y-40">
+    <div class="space-y-30">
         <Hero />
         <SyncWork />
         <Features />

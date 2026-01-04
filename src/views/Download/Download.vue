@@ -101,37 +101,37 @@ const downloads = [
   {
     os: "windows",
     icon: "bi-windows",
-    fileName: "silvernote-{{version}}-win-setup.exe"
+    fileName: "Silvernote-Setup-{{version}}.exe"
   },
   {
     os: "macos",
     icon: "bi-apple",
-    fileName: "silvernote-{{version}}-macos.dmg"
+    fileName: "Silvernote-{{version}}-arm64.dmg"
   },
-  {
-    os: "ios",
-    icon: "bi-phone",
-    fileName: "applestore"
-  },
-  {
-    os: "android",
-    icon: "bi-android",
-    fileName: "playstore"
-  },
+  // {
+  //   os: "ios",
+  //   icon: "bi-phone",
+  //   fileName: "applestore"
+  // },
+  // {
+  //   os: "android",
+  //   icon: "bi-android",
+  //   fileName: "playstore"
+  // },
   {
     os: "linux-rpm",
     icon: "bi-ubuntu",
-    fileName: "silvernote-{{version}}-linux-setup.rpm"
+    fileName: "Silvernote-{{version}}.x86_64.rpm"
   },
   {
     os: "linux-deb",
     icon: "bi-tux",
-    fileName: "silvernote-{{version}}-linux-setup.deb"
+    fileName: "Silvernote_{{version}}_amd64.deb"
   },
   {
     os: "linux-appimage",
     icon: "bi-box",
-    fileName: "silvernote-{{version}}-linux-setup.appimage"
+    fileName: "Silvernote-{{version}}.AppImage"
   }
 ];
 
@@ -140,9 +140,6 @@ const animateOnMount = async () => {
   
   // Header animation
   gsap.from('.download-header', { opacity: 0, y: 30, duration: 0.8, ease: 'power3.out', delay: 0.2 });
-  
-  // Button animation
-  gsap.from('.navbar-download-btn', { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out', delay: 0.5 });
   
   // Cards animation (staggered)
   gsap.from('.download-card', { opacity: 0, y: 40, duration: 0.6, stagger: 0.1, ease: 'back.out', delay: 0.7 });

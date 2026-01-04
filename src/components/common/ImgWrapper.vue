@@ -19,7 +19,7 @@
 <script lang="ts" setup>
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { nextTick, onMounted } from 'vue';
+import { onMounted } from 'vue';
 
 defineProps<{
   src: string;
@@ -29,26 +29,26 @@ gsap.registerPlugin(ScrollTrigger);
 
 onMounted(async () => {
 
-    await nextTick();
+    // await nextTick();
 
-    gsap.from(".img-gsap", {
-        translateY: 100,
-    });
+    // gsap.from(".img-gsap", {
+    //     translateY: 100,
+    // });
 
-    gsap.to(".img-gsap", {
-        translateY: 0,
-        scrollTrigger: {
-            trigger: ".img-gsap",
-            start: "top 80%",
-            end: "top 20%",
-            scrub: 1.5,
-            markers: false,
-        },
-    })
+    // gsap.to(".img-gsap", {
+    //     translateY: 0,
+    //     scrollTrigger: {
+    //         trigger: ".img-gsap",
+    //         start: "top 80%",
+    //         end: "top 20%",
+    //         scrub: 1.5,
+    //         markers: false,
+    //     },
+    // })
 
-    setTimeout(() => {
-        ScrollTrigger.refresh();
-    }, 200);
+    // setTimeout(() => {
+    //     ScrollTrigger.refresh();
+    // }, 200);
 
 })
 
