@@ -51,14 +51,6 @@ onMounted(async () => {
     delay: 0.6,
   });
 
-  // Animation du bouton mobile menu
-  gsap.from(".navbar-mobile-btn", {
-    opacity: 0,
-    scale: 0.5,
-    duration: 0.5,
-    ease: "back.out",
-    delay: 0.5,
-  });
 });
 </script>
 
@@ -113,7 +105,7 @@ onMounted(async () => {
             <!-- Mobile Menu Button -->
             <button
                 class="
-                    navbar-mobile-btn md:hidden 
+                    md:hidden 
                     flex items-center justify-center
                     w-11 h-11 rounded-full hover:bg-white/20 
                     transition-colors cursor-pointer
