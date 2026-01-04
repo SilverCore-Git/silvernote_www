@@ -2,7 +2,7 @@
 import { onMounted, nextTick, ref } from "vue";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SButton, SnoteStatus } from "@/components";
+import { Minuteur, SButton, SnoteStatus } from "@/components";
 import getVersion from "@/utils/getVersion";
 import openApp from "@/utils/openApp";
 
