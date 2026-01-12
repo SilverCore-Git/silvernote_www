@@ -165,7 +165,7 @@ onMounted(async () => {
 
             <Minuteur
                 title="Silvernote sort dans :"
-                date="16-01-2026" 
+                date="30-01-2026" 
             />
 
             <div class="z-10 perspective-[2000px] w-full max-w-4xl">
