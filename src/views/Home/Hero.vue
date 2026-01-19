@@ -2,7 +2,7 @@
 import { onMounted, nextTick, ref } from "vue";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Minuteur, SButton, SnoteStatus } from "@/components";
+import { SButton, SnoteStatus } from "@/components";
 import getVersion from "@/utils/getVersion";
 import openApp from "@/utils/openApp";
 
@@ -165,7 +165,7 @@ onMounted(async () => {
 
             <!-- <Minuteur
                 title="Silvernote sort dans :"
-                date="30-01-2026" 
+                date="16-01-2026" 
             /> -->
 
             <div class="z-10 perspective-[2000px] w-full max-w-4xl">
