@@ -16,7 +16,7 @@
             <SButton
                 :content="`Télécharger pour ${currentOS}`"
                 href="none"
-                @click="downloadsCurrentOS"
+                @click="downloadsCurrentOS()"
             />
         </div>
 
@@ -30,7 +30,7 @@
                     download-card p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-all
                     border border-gray-200 hover:border-gray-300 w-80 h-80
                     flex flex-col items-center gap-4 cursor-pointer
-                  "
+                "
             >
             
                 <div class="text-8xl p-5 object-cover">
@@ -53,6 +53,58 @@
 
     </div>
 
+
+    <Transition name="fade-scale">
+
+      <div
+        v-if="showDownloadLinuxPopup"
+        @click="showDownloadLinuxPopup = false"
+        class="fixed inset-0 z-40 flex justify-center items-center
+               bg-black/30 backdrop-blur-sm"
+      >
+
+        <div
+          class="
+            z-50 bg-white/50 backdrop-blur-2xl
+            border border-gray-200 rounded-2xl
+            p-6 w-full max-w-md shadow-md
+          "
+        >
+
+          <i
+            class="absolute top-6 right-6 bi bi-x text-4xl cursor-pointer"
+            @click="showDownloadLinuxPopup = false"
+          />
+
+          <h3 class="text-lg font-bold mb-4">
+            Télécharger Silvernote
+          </h3>
+
+          <div class="grid grid-cols-1 gap-3 w-full">
+
+            <a
+              v-for="btn in downloads.filter((d: any) => d.os.startsWith('linux'))"
+              :key="btn.os + 'btn-menu'"
+              :href="getHref(btn.os)"
+              class="w-full"
+            >
+              <SButton
+                :content="'Télécharger pour : ' + btn.os"
+                href="none"
+                twstyle="w-full"
+                class="w-full"
+              />
+            </a>
+          
+          </div>
+
+        </div>
+
+      </div>
+
+    </Transition>
+
+
 </template>
 
 <script setup lang="ts">
@@ -70,30 +122,7 @@ const detectOS = (): "windows" | "macos" | "linux" | "android" | "ios" => {
   return "linux";
 };
 
-
-const getHref = (os: string) => {
-    if (downloads.find(_os => _os.os === os)?.fileName === 'applestore') 
-    {
-        return '';
-    }
-    else if (downloads.find(_os => _os.os === os)?.fileName === 'playstore') 
-    {
-        return '';
-    }
-    else
-    {
-        const fileName = (downloads.find(_os => _os.os === os)?.fileName)?.replace('{{version}}', version.value.replace('v', ''));
-        return `https://github.com/SilverCore-Git/silvernote_app/releases/download/${version.value}/${fileName}`;
-    }
-}
-
-const downloadsCurrentOS = () => {
-
-    window.open(getHref(currentOS), '_self');
-  
-}
-
-
+const showDownloadLinuxPopup = ref<boolean>(false);
 const currentOS = detectOS();
 const version = ref<string>('');
 
@@ -134,6 +163,33 @@ const downloads = [
     fileName: "Silvernote-{{version}}.AppImage"
   }
 ];
+
+const getHref = (os: string) => {
+    if (downloads.find(_os => _os.os === os)?.fileName === 'applestore') 
+    {
+        return '';
+    }
+    else if (downloads.find(_os => _os.os === os)?.fileName === 'playstore') 
+    {
+        return '';
+    }
+    else
+    {
+        const fileName = (downloads.find(_os => _os.os === os)?.fileName)?.replace('{{version}}', version.value.replace('v', ''));
+        return `https://github.com/SilverCore-Git/silvernote_app/releases/download/${version.value}/${fileName}`;
+    }
+}
+
+const downloadsCurrentOS = () => {
+  
+  if (currentOS !== 'linux') {
+    window.open(getHref(currentOS), '_self');
+    return;
+  }
+
+  showDownloadLinuxPopup.value = true;
+  
+}
 
 const animateOnMount = async () => {
   await nextTick();

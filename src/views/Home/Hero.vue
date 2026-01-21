@@ -171,7 +171,7 @@ onMounted(async () => {
             <div class="z-10 perspective-[2000px] w-full max-w-4xl">
                 <img 
                     class="rounded-2xl hero-img z-10 w-full shadow-2xl"
-                    src="/assets/img/silvernote_desktop_screen.png"
+                    src="/assets/screenshot/home_light.png"
                     alt="SilverNote Interface"
                 />
             </div>
