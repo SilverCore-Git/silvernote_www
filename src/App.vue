@@ -6,7 +6,7 @@ import { Navbar, Footer } from '@/components';
 
   <div class="w-screen h-screen">
       <Navbar />
-      <router-view/>
+      <router-view />
       <Footer />
   </div>
 
