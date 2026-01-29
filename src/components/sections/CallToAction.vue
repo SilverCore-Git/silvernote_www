@@ -9,24 +9,44 @@ import openApp from '../../utils/openApp';
 gsap.registerPlugin(ScrollTrigger);
 const sectionEl = ref<HTMLElement | null>(null);
 
+const stats = ref<{ notesLength: number, tagsLength: number, usersLength: number }>({
+    notesLength: 0,
+    tagsLength: 0,
+    usersLength: 0,
+});
+
 onMounted(async () => {
-  await nextTick();
-  
-  const section = sectionEl.value;
-  if (!section) return;
 
-  const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: section,
-      start: 'top 80%',
-      toggleActions: 'play none none reverse',
-    }
-  });
+    await nextTick();
+    
+    const section = sectionEl.value;
+    if (!section) return;
 
-  tl.from('.usesnote-badge', { opacity: 0, scale: 0.8, duration: 0.6, ease: 'back.out' }, 0.2)
-    .from('.usesnote-title', { opacity: 0, y: 30, duration: 0.8, ease: 'power3.out' }, 0.4)
-    .from('.usesnote-description', { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out' }, 0.6)
-    .from('.usesnote-buttons > div', { opacity: 0, y: 20, duration: 0.6, stagger: 0.1, ease: 'power3.out' }, 0.8);
+    const tl = gsap.timeline({
+        scrollTrigger: {
+        trigger: section,
+        start: 'top 80%',
+        toggleActions: 'play none none reverse',
+        }
+    });
+
+    tl.from('.usesnote-badge', { opacity: 0, scale: 0.8, duration: 0.6, ease: 'back.out' }, 0.2)
+        .from('.usesnote-title', { opacity: 0, y: 30, duration: 0.8, ease: 'power3.out' }, 0.4)
+        .from('.usesnote-description', { opacity: 0, y: 20, duration: 0.6, ease: 'power3.out' }, 0.6)
+        .from('.usesnote-buttons > div', { opacity: 0, y: 20, duration: 0.6, stagger: 0.1, ease: 'power3.out' }, 0.8);
+
+
+    const [ dbLength, usersLength ] = await Promise.all([
+        fetch(`https://api.silvernote.fr/resources/db/length`).then(res => res.json()),
+        fetch(`https://api.silvernote.fr/resources/clerk/users/length`).then(res => res.json())
+    ]);
+
+    stats.value = {
+        notesLength: dbLength.notes.length,
+        tagsLength: dbLength.tags.length,
+        usersLength: usersLength.users,
+    };
+
 });
 
 </script>
@@ -66,22 +86,22 @@ onMounted(async () => {
             </div>
 
             <!-- Trust indicators -->
-            <!-- <div class="mt-12 flex flex-col sm:flex-row gap-8 justify-center items-center text-center opacity-75">
+            <div v-if="stats" class="mt-12 flex flex-col sm:flex-row gap-8 justify-center items-center text-center opacity-75">
                 <div class="usesnote-trust-item">
-                    <p class="font-bold text-lg text-[var(--primary)]">10K+</p>
-                    <p class="text-sm text-gray-600">Utilisateurs satisfaits</p>
+                    <p class="font-bold text-lg text-[var(--primary)]">{{ stats.notesLength }}+</p>
+                    <p class="text-sm text-gray-600">Notes créer</p>
                 </div>
                 <div class="hidden sm:block w-px h-8 bg-gray-300"></div>
                 <div class="usesnote-trust-item">
-                    <p class="font-bold text-lg text-[var(--primary)]">4.8/5</p>
-                    <p class="text-sm text-gray-600">Évaluation moyenne</p>
+                    <p class="font-bold text-lg text-[var(--primary)]">{{ stats.tagsLength }}+</p>
+                    <p class="text-sm text-gray-600">Tags créer</p>
                 </div>
                 <div class="hidden sm:block w-px h-8 bg-gray-300"></div>
                 <div class="usesnote-trust-item">
-                    <p class="font-bold text-lg text-[var(--primary)]">24/7</p>
-                    <p class="text-sm text-gray-600">Support disponible</p>
+                    <p class="font-bold text-lg text-[var(--primary)]">{{ stats.usersLength }}+</p>
+                    <p class="text-sm text-gray-600">Utilisateurs</p>
                 </div>
-            </div> -->
+            </div>
 
         </div>
 
