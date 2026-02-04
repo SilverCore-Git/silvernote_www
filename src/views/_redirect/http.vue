@@ -1,6 +1,7 @@
-<template></template>
+<template><Redirect /></template>
 
 <script setup lang="ts">
+import Redirect from '@/components/common/Redirect.vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
