@@ -9,7 +9,7 @@
                     Fonctionnalités
                 </p>
                 <h2 class="collab-title text-3xl md:text-5xl font-bold mt-3 leading-tight">
-                    Ce que Silvernote sait faire
+                    Ce que <span class="text-(--primary)">Silvernote</span> sait faire
                 </h2>
             </div>
 
