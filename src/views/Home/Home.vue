@@ -6,8 +6,8 @@
         <Features />
         <!-- <TestimonialsSection /> -->
         <!-- <PricingSection /> -->
-        <FAQSection />
         <UseSnote />
+        <FAQSection />
     </div>
 
 </template>
@@ -15,6 +15,7 @@
 <script lang="ts" setup>
 import Hero from './Hero.vue';
 import SyncWork from './syncWork.vue';
-import { FAQSection, UseSnote } from '@/components';
+import UseSnote from './UseSnote.vue';
+import { FAQSection } from '@/components';
 import Features from './Features.vue';
 </script>
