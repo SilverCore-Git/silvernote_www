@@ -1,26 +1,27 @@
 <template>
 
-    <div
-        class="flex justify-start items-center
-                flex-col py-45 bg min-h-screen"
-    >
+    <SmothScrollWraper>
+        <div
+            class="flex justify-start items-center
+                    flex-col py-45 bg min-h-screen"
+        >
 
-        <div class="text-center mb-8 download-header">
-            <h1>
-                <span class="text-[var(--primary)]">Télécharger</span> silvernote
-            </h1>
-            <span class="download-version">{{ version }}</span>
-        </div>
+            <div class="text-center mb-8 download-header">
+                <h1>
+                    <span class="text-[var(--primary)]">Télécharger</span> silvernote
+                </h1>
+                <span class="download-version">{{ version }}</span>
+            </div>
 
-        <div>
-            <SButton
-                :content="`Télécharger pour ${currentOS}`"
-                href="none"
-                @click="downloadsCurrentOS()"
-            />
-        </div>
+            <div>
+                <SButton
+                    :content="`Télécharger pour ${currentOS}`"
+                    href="none"
+                    @click="downloadsCurrentOS()"
+                />
+            </div>
 
-        <div class="flex flex-wrap justify-center items-start gap-8 mt-20 max-w-6xl download-cards">
+            <div class="flex flex-wrap justify-center items-start gap-8 mt-20 max-w-6xl download-cards">
 
             <a
                 v-for="card in downloads"
@@ -53,6 +54,7 @@
 
     </div>
 
+    </SmothScrollWraper>
 
     <Transition name="fade-scale">
 
@@ -111,6 +113,7 @@
 
 import { onMounted, ref, nextTick } from 'vue';
 import { SButton } from '@/components';
+import SmothScrollWraper from "@/components/common/smothScrollWraper.vue";
 import gsap from 'gsap';
 
 const detectOS = (): "windows" | "macos" | "linux" | "android" | "ios" => {

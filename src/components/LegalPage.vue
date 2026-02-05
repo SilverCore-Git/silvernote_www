@@ -1,49 +1,53 @@
 <template>
-  <div class="legal-page pb-20 pt-40 bg">
-    <div class="legal-container ">
-      <!-- Header -->
-      <div class="legal-header ">
-        <h1>{{ config.title }}</h1>
-        <p v-if="config.lastUpdated" class="last-updated">
-          Dernière mise à jour: {{ formatDate(config.lastUpdated) }}
-        </p>
-      </div>
+  <smoth-scroll-wraper>
+    <div class="legal-page pb-20 pt-40 bg">
+      <div class="legal-container ">
+        <!-- Header -->
+        <div class="legal-header ">
+          <h1>{{ config.title }}</h1>
+          <p v-if="config.lastUpdated" class="last-updated">
+            Dernière mise à jour: {{ formatDate(config.lastUpdated) }}
+          </p>
+        </div>
 
-      <!-- Table of contents -->
-      <div class="toc">
-        <h2>Sommaire</h2>
-        <ul>
-          <li v-for="(section, index) in config.sections" :key="index">
-            <a :href="`#section-${index}`">{{ section.heading }}</a>
-          </li>
-        </ul>
-      </div>
+        <!-- Table of contents -->
+        <div class="toc">
+          <h2>Sommaire</h2>
+          <ul>
+            <li v-for="(section, index) in config.sections" :key="index">
+              <a :href="`#section-${index}`">{{ section.heading }}</a>
+            </li>
+          </ul>
+        </div>
 
-      <!-- Sections -->
-      <div class="legal-content">
-        <section
-          v-for="(section, index) in config.sections"
-          :key="index"
-          :id="`section-${index}`"
-          class="legal-section"
-        >
-          <h2>{{ section.heading }}</h2>
-          <p class="section-text">{{ section.content }}</p>
-        </section>
-      </div>
+        <!-- Sections -->
+        <div class="legal-content">
+          <section
+            v-for="(section, index) in config.sections"
+            :key="index"
+            :id="`section-${index}`"
+            class="legal-section"
+          >
+            <h2>{{ section.heading }}</h2>
+            <p class="section-text">{{ section.content }}</p>
+          </section>
+        </div>
 
-      <!-- Footer -->
-      <div class="legal-footer">
-        <p>
-          Pour toute question ou commentaire, n'hésitez pas à
-          <router-link to="/contact">nous contacter</router-link>.
-        </p>
+        <!-- Footer -->
+        <div class="legal-footer">
+          <p>
+            Pour toute question ou commentaire, n'hésitez pas à
+            <router-link to="/contact">nous contacter</router-link>.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
+  </smoth-scroll-wraper>
 </template>
 
 <script setup lang="ts">
+import SmothScrollWraper from '@/components/common/smothScrollWraper.vue';
+
 interface LegalSection {
   heading: string;
   content: string;

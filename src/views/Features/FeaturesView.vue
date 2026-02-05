@@ -1,68 +1,70 @@
 <template>
 
-    <section class="py-40 px-4 bg">
-    
-        <div class="max-w-4xl mx-auto">
+    <smoth-scroll-wraper>
+        <section class="py-40 px-4 bg">
+        
+            <div class="max-w-4xl mx-auto">
 
-            <!-- Header -->
-            <div class="text-center mb-14 feature-header">
-                <div class="flex justify-center mb-6">
-                    <i
-                        v-if="feature"
-                        class="bi text-7xl text-(--primary)"
-                        :class="feature.icon"
-                    />
+                <!-- Header -->
+                <div class="text-center mb-14 feature-header">
+                    <div class="flex justify-center mb-6">
+                        <i
+                            v-if="feature"
+                            class="bi text-7xl text-(--primary)"
+                            :class="feature.icon"
+                        />
+                    </div>
+
+                    <h1 class="text-3xl md:text-5xl font-bold mb-4">
+                        {{ feature?.title }}
+                    </h1>
+
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        {{ feature?.description }}
+                    </p>
                 </div>
 
-                <h1 class="text-3xl md:text-5xl font-bold mb-4">
-                    {{ feature?.title }}
-                </h1>
-
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    {{ feature?.description }}
-                </p>
-            </div>
-
-            <!-- Details -->
-            <div
-                v-if="feature"
-                class="bg-white rounded-2xl shadow-lg p-8 md:p-10 feature-content"
-            >
-                <p class="text-gray-700 text-base md:text-lg mb-8">
-                    {{ feature.details }}
-                </p>
-
-                <ul class="space-y-4">
-                    <li
-                        v-for="(item, index) in feature.features"
-                        :key="index"
-                        class="flex items-start gap-3 feature-item"
-                    >
-                        <i class="bi bi-check-circle-fill text-(--primary) mt-1"></i>
-                        <span class="text-gray-800">
-                            {{ item }}
-                        </span>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Back button -->
-            <div class="mt-12 text-center">
-                <router-link
-                    to="/features"
+                <!-- Details -->
+                <div
+                    v-if="feature"
+                    class="bg-white rounded-2xl shadow-lg p-8 md:p-10 feature-content"
                 >
-                    <p
-                        class="inline-flex items-center gap-2 text-(--primary) font-semibold text-lg hover:underline"
-                    >    
-                        <i class="bi bi-arrow-left"></i>
-                        Retour aux fonctionnalités
+                    <p class="text-gray-700 text-base md:text-lg mb-8">
+                        {{ feature.details }}
                     </p>
-                </router-link>
-            </div>
 
-        </div>
-    
-    </section>
+                    <ul class="space-y-4">
+                        <li
+                            v-for="(item, index) in feature.features"
+                            :key="index"
+                            class="flex items-start gap-3 feature-item"
+                        >
+                            <i class="bi bi-check-circle-fill text-(--primary) mt-1"></i>
+                            <span class="text-gray-800">
+                                {{ item }}
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Back button -->
+                <div class="mt-12 text-center">
+                    <router-link
+                        to="/features"
+                    >
+                        <p
+                            class="inline-flex items-center gap-2 text-(--primary) font-semibold text-lg hover:underline"
+                        >    
+                            <i class="bi bi-arrow-left"></i>
+                            Retour aux fonctionnalités
+                        </p>
+                    </router-link>
+                </div>
+
+            </div>
+        
+        </section>
+    </smoth-scroll-wraper>
 
 </template>
 
@@ -71,6 +73,7 @@
 import { computed, onMounted, nextTick } from 'vue'
 import { useRoute } from 'vue-router'
 import gsap from 'gsap'
+import SmothScrollWraper from "@/components/common/smothScrollWraper.vue";
 import features from './Features.json'
 
 const route = useRoute()

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Navbar, Footer } from '@/components';
+import { Navbar } from '@/components';
 </script>
 
 <template>
@@ -7,7 +7,6 @@ import { Navbar, Footer } from '@/components';
   <div class="w-screen h-screen">
       <Navbar />
       <router-view />
-      <Footer />
   </div>
 
 </template>

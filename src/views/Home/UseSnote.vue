@@ -9,6 +9,11 @@ gsap.registerPlugin(ScrollTrigger);
 onMounted(async () => {
   await nextTick();
 
+  const isMobile = window.innerWidth < 768;
+
+  // Pas d'animations sur mobile
+  if (isMobile) return;
+
   const section = document.querySelector('.usesnote-section');
   if (!section) return;
 
@@ -57,6 +62,10 @@ onMounted(async () => {
     duration: 0.8,
     ease: 'power3.out',
   }, 0.9);
+
+  setTimeout(() => {
+    ScrollTrigger.refresh();
+  }, 300);
 });
 </script>
 

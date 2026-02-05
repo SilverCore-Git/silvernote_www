@@ -27,6 +27,11 @@ onMounted(async () => {
 
     await nextTick();
 
+    const isMobile = window.innerWidth < 768;
+
+    // Pas d'animations sur mobile
+    if (isMobile) return;
+
     // ===== ANIMATIONS D'APPARITION =====
     
     // Badge version
@@ -104,7 +109,7 @@ onMounted(async () => {
 
     setTimeout(() => {
         ScrollTrigger.refresh();
-    }, 200);
+    }, 300);
 
 });
 </script>

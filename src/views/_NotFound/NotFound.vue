@@ -33,7 +33,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col items-center justify-center px-4 bg-gradient-to-b from-white/50 to-white/25">
+    <div class="min-h-screen flex flex-col items-center justify-center px-4 bg-gradient-to-b from-white/50 to-white/25" />
     <div class="text-center max-w-2xl">
       <!-- 404 Icon -->
       <div class="notfound-icon mb-8 inline-block">
@@ -92,5 +92,4 @@ onMounted(async () => {
         </div>
       </div>
     </div>
-  </div>
 </template>
