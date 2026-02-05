@@ -1,5 +1,7 @@
-<template><h1>Vous allez être redirigé...</h1></template>
+<template><Redirect /></template>
 
 <script lang="ts" setup>
-window.location.href = 'https://app.silvernote.fr'
+import Redirect from '@/components/common/Redirect.vue';
+
+window.location.href = 'https://app.silvernote.fr?utm_source=silvernote-www&utm_medium=redirect&utm_campaign=app_redirect';
 </script>

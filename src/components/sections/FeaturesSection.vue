@@ -1,11 +1,11 @@
 <template>
 
-    <section ref="sectionEl" class="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12 px-4 md:px-0 min-h-[600px] md:h-[700px] max-w-5xl mx-auto w-full">
+    <section ref="sectionEl" class="feature-section flex flex-col-reverse md:flex-row items-center gap-8 md:gap-16 px-4 md:px-0 py-16 md:py-24 min-h-[600px] md:h-auto max-w-6xl mx-auto w-full">
 
         <div 
             class="
                 flex flex-col-reverse md:flex-row items-center
-                gap-8 md:gap-12 w-full
+                gap-8 md:gap-16 w-full
             "
         >
                 
@@ -17,12 +17,12 @@
 
             <div class="w-full md:w-1/2 flex flex-col gap-6 justify-center feature-content">
 
-                <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-6">
                         
-                    <span class="text-base md:text-lg font-semibold text-(--primary) uppercase tracking-wide">
-                        {{ prop.subject }}
+                    <span class="text-sm md:text-base font-bold text-[var(--primary)] uppercase tracking-widest">
+                        ✨ {{ prop.subject }}
                     </span>
-                    <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-900">
                         {{ prop.title }}
                     </h2>
                     <p class="text-gray-700 text-base md:text-lg leading-relaxed">
@@ -39,18 +39,18 @@
 
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                     <div 
                         v-for="(feature, index) in prop.features" 
                         :key="index" 
-                        class="flex items-center gap-3 p-4 bg-white/50 rounded-xl backdrop-blur-sm hover:bg-white/80 transition-colors duration-300 shadow-sm"
+                        class="feature-item flex items-start gap-4 p-4 rounded-xl bg-gradient-to-br from-white/80 to-white/40 border border-white/60 hover:border-[var(--primary)]/30 hover:from-white hover:to-white/60 transition-all duration-300 shadow-sm"
                     >
-                        <div class="flex-shrink-0 w-6 h-6 text-[var(--primary)] flex items-center justify-center">
+                        <div class="flex-shrink-0 w-5 h-5 text-[var(--primary)] flex items-center justify-center pt-0.5">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                             </svg>
                         </div>
-                        <span class="font-medium text-gray-800 text-sm md:text-base">
+                        <span class="font-medium text-gray-800 text-sm md:text-base leading-relaxed">
                             {{ feature.title }}
                         </span>
                     </div>

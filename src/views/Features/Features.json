@@ -94,10 +94,24 @@
     "description": "Votre assistant intelligent intégré pour améliorer vos notes.",
     "details": "SilverIA Agent vous aide à rédiger, reformuler, résumer ou enrichir vos notes.",
     "features": [
+      "Création de notes et de tags",
       "Rédaction automatique de contenu",
       "Suggestions d’amélioration et de reformulation",
       "Résumé instantané des notes",
       "Assistance contextuelle en temps réel"
+    ]
+  },
+  {
+    "slug": "2048",
+    "icon": "bi-grid-3x3-gap",
+    "title": "Jeux 2048",
+    "description": "Jouez à 2048 directement dans Silvernote.",
+    "details": "Accédez au jeu 2048 à partir de vos notes pour vous divertir pendant vos pauses.",
+    "features": [
+      "Jeu 2048 intégré",
+      "Interface intuitive",
+      "Sauvegarde automatique de votre progression",
+      "Compatible avec tous les appareils"
     ]
   }
 ]
