@@ -20,7 +20,6 @@ onMounted(async () => {
     if (!section) return;
 
     const headerTexts = section.querySelectorAll('.faq-header > *');
-    const faqItems = section.querySelectorAll('.faq-item');
     const cta = section.querySelector('.faq-cta');
 
     const tl = gsap.timeline({
