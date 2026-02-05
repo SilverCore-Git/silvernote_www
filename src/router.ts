@@ -93,9 +93,16 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
   scrollBehavior(to, _from, _savedPosition) {
+    // Toujours scroller vers le haut au changement de page
+    window.scrollTo(0, 0);
+    
     if (to.hash) {
-      const el = document.querySelector(to.hash);
-      if (el) return { top: (el as HTMLElement).offsetTop, behavior: 'smooth' };
+      setTimeout(() => {
+        const el = document.querySelector(to.hash);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
     }
     return { top: 0 };
   }
