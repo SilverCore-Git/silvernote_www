@@ -145,11 +145,11 @@ const downloads = [
   //   icon: "bi-phone",
   //   fileName: "applestore"
   // },
-  // {
-  //   os: "android",
-  //   icon: "bi-android",
-  //   fileName: "playstore"
-  // },
+  {
+    os: "android",
+    icon: "bi-android",
+    fileName: "playstore"
+  },
   {
     os: "linux-rpm",
     icon: "bi-ubuntu",
@@ -174,7 +174,7 @@ const getHref = (os: string) => {
     }
     else if (downloads.find(_os => _os.os === os)?.fileName === 'playstore') 
     {
-        return '';
+        return 'https://taap.it/store-silvernote';
     }
     else
     {
